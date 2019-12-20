@@ -1,6 +1,6 @@
 <template>
   <div>
-    Funding List here
+    <h1>404 PAGE NOT FOUND</h1>
   </div>
 </template>
 

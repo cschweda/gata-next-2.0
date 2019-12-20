@@ -14,6 +14,9 @@ const md = require('markdown-it')(config.markdownItOptions)
   .use(require('markdown-it-attrs'))
 const siteArray = Object.getOwnPropertyNames(config.siteConfig)
 
+// const base = process.env.NODE_ENV === 'production' ? '/test' : ``
+const base = ''
+
 /**
  * Sort array of objects by property
  *
@@ -44,7 +47,7 @@ function linkify(html, section, slug) {
 
     //console.log(arr[1], match)
     if (!match && isAFile) {
-      const href = `${section}/${slug}/${arr[1]}`
+      const href = `materials/${section}/${slug}/${arr[1]}`
       return `href="/${href}`
     }
     return $1
@@ -102,11 +105,11 @@ const readFiles = dirname => {
              */
             //console.log(config.siteConfig[obj.section])
             if (obj.slug != 'home') {
-              obj.path = `${config.siteConfig[obj.section].parentPath}${
+              obj.path = `${base}${config.siteConfig[obj.section].parentPath}${
                 obj.slug
               }`
             } else {
-              obj.path = '/'
+              obj.path = `${base}/`
             }
 
             let html = linkify(md.render(obj.body), obj.section, obj.slug)
@@ -120,10 +123,12 @@ const readFiles = dirname => {
   )
 }
 
-if (!fs.existsSync(`${jsonDestinationPath}`)) {
-  fs.mkdirSync(`${jsonDestinationPath}`)
-}
+// if (!fs.existsSync(`${jsonDestinationPath}`)) {
+//   fs.mkdirSync(`${jsonDestinationPath}`)
+// }
 
+const routes = []
+const funding = []
 siteArray.forEach(obj => {
   readFiles(`${markdownSourcePath}${obj}/`).then(
     allContents => {
@@ -147,13 +152,29 @@ siteArray.forEach(obj => {
       /**
        * ... then write a single json file to api directory for each content folder.
        */
+      //fs.writeFileSync(`./static/api/${obj}.json`, JSON.stringify(allContents))
+      // console.log(`${jsonDestinationPath}${obj}.json: successfully created`)
+      metaArray = []
+      allContents.forEach(item => {
+        let meta = {}
+        meta.slug = item.slug
+        meta.title = item.title
+        meta.section = item.section
+        meta.excerpt = item.excerpt
+        meta.expires = item.expires
+        meta.path = item.path
+        meta.status = item.status
+        metaArray.push(meta)
+        fs.writeFileSync(
+          `./static/api/${item.section}/${item.slug}.json`,
+          JSON.stringify(item)
+        )
+      })
       fs.writeFileSync(
-        `${jsonDestinationPath}${obj}.json`,
-        JSON.stringify(allContents)
+        `./static/api/meta/${obj}.json`,
+        JSON.stringify(metaArray)
       )
-      console.log(`${jsonDestinationPath}${obj}.json: successfully created`)
     },
     error => console.log(error)
   )
-  console.log(obj)
 })

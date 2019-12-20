@@ -34,7 +34,8 @@
               order-sm="2"
             >
               <div
-                
+                class="dynamic-content"
+                @click="handleClicks"
                 v-html="content.html"
               />
             </v-col>
@@ -47,12 +48,26 @@
 
 <script>
 import BaseContent from '@/components/BaseContent'
-// import { handleClicks } from '@/mixins/handleClicks'
+const getContent = (section, slug) =>
+  import(`../static/api/${section}/${slug}.json`).then(m => m.default || m)
+import { handleClicks } from '@/mixins/handleClicks'
 export default {
   components: {
     BaseContent
   },
-  // mixins: [handleClicks],
+  mixins: [handleClicks],
+  async asyncData({ $axios, isDev, redirect }) {
+    try {
+      let content = await getContent('pages', 'home')
+      let loading = false
+      return { content, loading }
+    } catch (error) {
+      let loading = false
+      let content = ''
+      console.log(error)
+      redirect('/404')
+    }
+  },
   data() {
     return {
       hideExpired: true,
@@ -61,22 +76,7 @@ export default {
     }
   },
   mounted() {
-    this.fetchContent()
-  },
-
-  methods: {
-    fetchContent() {
-      this.loading = true
-      const content = this.$store.state.pages.filter(p => {
-        return p.slug === 'home'
-      })
-      if (content.length) {
-        this.content = content[0]
-      } else {
-        console.log('Error: Page Not Found')
-      }
-      this.loading = false
-    }
+    console.log(this.$router)
   }
 }
 </script>

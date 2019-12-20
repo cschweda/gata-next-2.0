@@ -7,6 +7,7 @@
       <slot name="title" />
       <slot name="printer" />
       <slot name="content" />
+      <slot name="error" />
     </div>
     <div v-else>
       <v-container>

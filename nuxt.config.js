@@ -1,8 +1,6 @@
 const pkg = require('./package')
 const routes = require('./routes')
 
-console.log(routes)
-
 console.log(process.env.NODE_ENV)
 
 module.exports = {
@@ -52,9 +50,10 @@ module.exports = {
   generate: {
     routes
   },
-  router: {
-    base: process.env.NODE_ENV === 'development' ? '' : '/test/'
-  },
+
+  // router: {
+  //   base: process.env.NODE_ENV === 'development' ? '' : '/test/'
+  // },
   /*
    ** Build configuration
    */

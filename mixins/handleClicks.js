@@ -10,6 +10,7 @@ export const handleClicks = {
       const { target } = $event
       const href = $event.target.href
       const mailto = /mailto/g
+      const download = /^.*\.(pdf|doc|docx|xls|xlsx)$/i
 
       //console.log(target);
       // handle only links that occur inside the component and do not reference external resources
@@ -21,7 +22,8 @@ export const handleClicks = {
         target &&
         target.matches(".dynamic-content a:not([href*='://'])") &&
         target.href &&
-        !href.match(mailto)
+        !href.match(mailto) &&
+        !href.match(download)
       ) {
         // some sanity checks taken from vue-router:
         // https://github.com/vuejs/vue-router/blob/dev/src/components/link.js#L106

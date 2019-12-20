@@ -1,107 +1,83 @@
-
 <template>
-  <div class="top">
-    <div
-      v-if="content && !loading"
-      v-html="content.html"
-    />
-
-    {{ tocItems }}
+  <div>
+    <base-content
+      id="baseContentTop"
+      :loading="loading"
+    >
+      <template v-slot:title>
+        <v-container
+          v-if="content"
+          fluid
+        >
+          <v-row>
+            <v-col cols="12">
+              <h1 class="page-title">
+                {{ content.title }}
+              </h1>
+            </v-col>
+          </v-row>
+        </v-container>
+      </template>
+      <template v-slot:content>
+        <v-container
+          v-if="content"
+          id="scrollArea"
+          fluid
+        >
+          <v-row>
+            <v-col
+              cols="12"
+              sm="12"
+              md="12"
+              order-md="1"
+              order="2"
+              order-sm="2"
+            >
+              <div
+                class="dynamic-content"
+                @click="handleClicks"
+                v-html="content.html"
+              />
+            </v-col>
+          </v-row>
+        </v-container>
+      </template>
+    </base-content>
   </div>
 </template>
 
 <script>
-/* eslint-disable vue/no-unused-components */
-import { mapGetters } from 'vuex'
-
 import BaseContent from '@/components/BaseContent'
-import Breadcrumb from '@/components/Breadcrumb'
-import BaseList from '@/components/BaseList'
-import BaseCard from '@/components/BaseCard'
-import TableOfContents from '@/components/TableOfContents'
-
+const getContent = (section, slug) =>
+  import(`../../static/api/${section}/${slug}.json`).then(m => m.default || m)
+import { handleClicks } from '@/mixins/handleClicks'
 export default {
-  transition: 'tweakOpacity',
-  components: { BaseContent, BaseCard, Breadcrumb, TableOfContents, BaseList },
+  components: {
+    BaseContent
+  },
+  mixins: [handleClicks],
+  async asyncData({ $axios, isDev, redirect, params }) {
+    try {
+      let content = await getContent('funding', params.slug)
+      let loading = false
+      return { content, loading }
+    } catch (error) {
+      let loading = false
+      let content = ''
+
+      console.log(error)
+      redirect('/404')
+    }
+  },
   data() {
     return {
-      tocItems: [],
-      title: 'General Overview',
-      loading: true,
-      content: null
-    }
-  },
-  head() {
-    return {
-      title: `ICJIA GATA | ${this.getTitle}`
-    }
-  },
-  computed: {
-    ...mapGetters(['funding']),
-    isExpired() {
-      const today = new Date()
-      const target = new Date(today.getTime() - 24 * 60 * 60 * 1000)
-      if (new Date(this.content.expires) < target) {
-        return true
-      } else {
-        return false
-      }
-    },
-    getTitle() {
-      return `${this.title}`
-    }
-  },
-  watch: {
-    content(newValue, oldValue) {
-      const toc = Array.prototype.slice.call(document.querySelectorAll('h2'))
-      const tocItems = toc.map(item => {
-        let obj = {}
-        obj.id = item.id
-        obj.text = item.innerHTML
-        return obj
-      })
-      const intro = { id: 'top', text: 'Notice of Funding Opportunity' }
-      tocItems.unshift(intro)
-      this.tocItems = tocItems
-    }
-  },
-  created() {
-    this.fetchContent()
-  },
-  methods: {
-    fetchContent() {
-      this.loading = true
-      const { slug } = this.$route.params
-      const content = this.$store.state.funding.filter(p => {
-        return p.slug === `${slug}`
-      })
-      if (content.length) {
-        this.content = content[0]
-      } else {
-        console.log('Error: Page Not Found')
-        //this.$router.push('/404')
-      }
-      this.loading = false
+      hideExpired: true,
+      content: null,
+      loading: true
     }
   }
 }
 </script>
 
-<style scoped>
-.nofo {
-  font-weight: bold;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.table-of-contents {
-  position: fixed;
-  top: 130px;
-  right: 10px;
-}
-
-.tocSpacer {
-  margin-top: 65px;
-}
+<style>
 </style>
