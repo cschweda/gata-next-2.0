@@ -59,7 +59,7 @@ export default {
     BaseContent
   },
   mixins: [handleClicks],
-  async asyncData({ $axios, isDev, redirect }) {
+  async asyncData({ isDev, redirect }) {
     try {
       let content = await getContent('pages', 'home')
       let loading = false

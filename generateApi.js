@@ -149,11 +149,6 @@ siteArray.forEach(obj => {
         })
       }
 
-      /**
-       * ... then write a single json file to api directory for each content folder.
-       */
-      //fs.writeFileSync(`./static/api/${obj}.json`, JSON.stringify(allContents))
-      // console.log(`${jsonDestinationPath}${obj}.json: successfully created`)
       metaArray = []
       allContents.forEach(item => {
         let meta = {}
@@ -165,11 +160,17 @@ siteArray.forEach(obj => {
         meta.path = item.path
         meta.status = item.status
         metaArray.push(meta)
+        /**
+         * ... write individual files to api folder...
+         */
         fs.writeFileSync(
           `./static/api/${item.section}/${item.slug}.json`,
           JSON.stringify(item)
         )
       })
+      /**
+       * ... write meta files to api folder...
+       */
       fs.writeFileSync(
         `./static/api/meta/${obj}.json`,
         JSON.stringify(metaArray)

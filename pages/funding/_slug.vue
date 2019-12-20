@@ -55,7 +55,7 @@ export default {
     BaseContent
   },
   mixins: [handleClicks],
-  async asyncData({ $axios, isDev, redirect, params }) {
+  async asyncData({ isDev, redirect, params }) {
     try {
       let content = await getContent('funding', params.slug)
       let loading = false
