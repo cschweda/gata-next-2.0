@@ -8,16 +8,28 @@ section: 'pages'
 hideBreadcrumb: true
 ---
 
-[/funding/2019-caci](/funding/2019-caci)
+<div class="layout row wrap">
+<div class="flex xs12 sm12 md12">
+
+<a href="/funding/2019-caci">/funding/2019-caci</a>
 
 The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 708/1 et seq., increased accountability and transparency in the use of grant funds and reduced the administrative burden on state agencies and grantees through adoption of federal grant guidelines and regulations.
 
 GATA requires grants administered by Executive branch state agencies to be awarded via a competitive bidding process. In addition, all applicants must undergo a registration and pre-award screening process. This competitive grant award process is initiated with a _Notice of Funding Opportunity_.
+</div>
+</div>
 
-## ICJIA Grant Process
+<div class="layout row wrap">
+<div class="flex xs12 sm12 md12">
+<h2>ICJIA Grant Process</h2>
+</div>
+</div>
 
-<div class="layout row wrap mt-5">
+
+
+<div class="layout row wrap">
 <div class="flex xs12 sm12 md6">
+
 
 When applying for funding via a Notice of Funding Opportunity, applicants are required to concisely address a specified scope of work, provide a program budget detailing personnel and equipment needs, and qualify their experience to implement the program's scope of services. Applications are competitively reviewed and scored.
 

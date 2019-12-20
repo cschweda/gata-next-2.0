@@ -48,8 +48,7 @@
 
 <script>
 import BaseContent from '@/components/BaseContent'
-const getContent = (section, slug) =>
-  import(`../../static/api/${section}/${slug}.json`).then(m => m.default || m)
+import { getContent } from '@/services/Content'
 import { handleClicks } from '@/mixins/handleClicks'
 export default {
   components: {

@@ -10,11 +10,15 @@
           fluid
         >
           <v-row>
-            <v-col cols="12">
-              <h1 class="page-title">
-                {{ content.title }}
+            <!-- <v-col cols="12">
+              <h1
+                class=""
+                style="margin-left: -15px;"
+              >
+                
               </h1>
-            </v-col>
+            </v-col> -->
+            <h1>{{ content.title }}</h1>
           </v-row>
         </v-container>
       </template>
@@ -48,8 +52,7 @@
 
 <script>
 import BaseContent from '@/components/BaseContent'
-const getContent = (section, slug) =>
-  import(`../static/api/${section}/${slug}.json`).then(m => m.default || m)
+import { getContent } from '@/services/Content'
 import { handleClicks } from '@/mixins/handleClicks'
 export default {
   components: {
@@ -75,9 +78,7 @@ export default {
       loading: true
     }
   },
-  mounted() {
-    console.log(this.$router)
-  }
+  mounted() {}
 }
 </script>
 
