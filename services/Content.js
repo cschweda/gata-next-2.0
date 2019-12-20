@@ -4,4 +4,7 @@ import { EventBus } from '@/event-bus.js'
 const getContent = async (section, slug) =>
   await import(`@/static/api/${section}/${slug}.json`).then(m => m.default || m)
 
-export { getContent }
+const getAllFunding = async () =>
+  await import(`@/static/api/meta/funding.json`).then(m => m.default || m)
+
+export { getContent, getAllFunding }

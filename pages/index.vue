@@ -44,6 +44,16 @@
               />
             </v-col>
           </v-row>
+          <v-row>
+            <v-col
+              cols="12"
+              sm="12"
+              md="12"
+            >
+              <h2>Funding Opportunities</h2>
+              <funding :funding="funding" />
+            </v-col>
+          </v-row>
         </v-container>
       </template>
     </base-content>
@@ -52,18 +62,21 @@
 
 <script>
 import BaseContent from '@/components/BaseContent'
-import { getContent } from '@/services/Content'
+import Funding from '@/components/Funding'
+import { getContent, getAllFunding } from '@/services/Content'
 import { handleClicks } from '@/mixins/handleClicks'
 export default {
   components: {
-    BaseContent
+    BaseContent,
+    Funding
   },
   mixins: [handleClicks],
   async asyncData({ isDev, redirect }) {
     try {
       let content = await getContent('pages', 'home')
+      let funding = await getAllFunding()
       let loading = false
-      return { content, loading }
+      return { content, funding, loading }
     } catch (error) {
       let loading = false
       let content = ''
