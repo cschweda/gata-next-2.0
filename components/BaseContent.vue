@@ -1,0 +1,45 @@
+<template>
+  <div>
+    <div
+      v-if="!loading"
+      class="px-4 py-10"
+    >
+      <slot name="title" />
+      <slot name="printer" />
+      <slot name="content" />
+    </div>
+    <div v-else>
+      <v-container>
+        <v-row>
+          <v-col>
+            <loader />
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+  </div>
+</template>
+
+<script>
+import Loader from '@/components/Loader'
+export default {
+  components: {
+    Loader
+  },
+  props: {
+    loading: {
+      type: Boolean,
+      default: true
+    }
+  },
+  mounted() {
+    //console.log(this.$browserDetect.isIE);
+  }
+}
+</script>
+
+<style scoped>
+.iePull {
+  margin-top: -75px;
+}
+</style>
