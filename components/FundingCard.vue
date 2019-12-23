@@ -1,13 +1,13 @@
 <template>
   <div>
-    {{ funding }}
+    {{ item }}
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    funding: {
+    item: {
       type: Array,
       default: () => []
     }

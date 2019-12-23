@@ -156,6 +156,7 @@ siteArray.forEach(obj => {
         meta.title = item.title
         meta.section = item.section
         meta.excerpt = item.excerpt
+        meta.posted = item.posted
         meta.expires = item.expires
         meta.path = item.path
         meta.status = item.status

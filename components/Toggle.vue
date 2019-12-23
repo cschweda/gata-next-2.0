@@ -1,9 +1,8 @@
 <template>
   <div>
     <v-switch
-      v-model="showCurrent"
+      v-model="toggle"
       :label="pageHeading"
-      :class="{isExpired: !showCurrent, isCurrent: showCurrent}"
     />
   </div>
 </template>
@@ -14,25 +13,25 @@ export default {
   name: 'Toggle',
   data() {
     return {
-      showCurrent: true
+      toggle: true
     }
   },
   computed: {
     pageHeading() {
-      if (this.showCurrent) {
-        return 'Current'
+      if (this.toggle) {
+        return 'current'
       } else {
-        return 'Expired'
+        return 'expired'
       }
     }
   },
   watch: {
-    showCurrent(newValue, oldValue) {
-      EventBus.$emit('toggleFundingDisplay', this.showCurrent)
+    toggle(newValue, oldValue) {
+      EventBus.$emit('toggle', this.pageHeading)
     }
   },
   mounted() {
-    EventBus.$emit('toggleFundingDisplay', this.showCurrent)
+    EventBus.$emit('toggle', this.pageHeading)
   },
   methods: {}
 }

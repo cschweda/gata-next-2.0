@@ -51,7 +51,13 @@
               md="12"
             >
               <h2>Funding Opportunities</h2>
-              <funding :funding="funding" />
+              <toggle />
+              <list-funding
+                :key="renderKey"
+                :funding="funding"
+                :toggle-state="toggleState"
+                @click="updateRenderKey()"
+              />
             </v-col>
           </v-row>
         </v-container>
@@ -62,13 +68,16 @@
 
 <script>
 import BaseContent from '@/components/BaseContent'
-import Funding from '@/components/Funding'
+import ListFunding from '@/components/ListFunding'
+import Toggle from '@/components/Toggle'
+import { EventBus } from '@/event-bus'
 import { getContent, getAllFunding } from '@/services/Content'
 import { handleClicks } from '@/mixins/handleClicks'
 export default {
   components: {
     BaseContent,
-    Funding
+    ListFunding,
+    Toggle
   },
   mixins: [handleClicks],
   async asyncData({ isDev, redirect }) {
@@ -88,10 +97,22 @@ export default {
     return {
       hideExpired: true,
       content: null,
-      loading: true
+      loading: true,
+      toggleState: null,
+      renderKey: 0
     }
   },
-  mounted() {}
+  created() {
+    EventBus.$on('toggle', state => {
+      this.toggleState = state
+      //console.log(this.toggleState)
+    })
+  },
+  methods: {
+    updateRenderey() {
+      return this.renderKey++
+    }
+  }
 }
 </script>
 
