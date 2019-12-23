@@ -7,11 +7,10 @@
       <template v-slot:title>
         <v-container
           v-if="content"
-          fluid
         >
-          <v-row>
+          <v-row class="text-left">
             <v-col cols="12">
-              <h1 class="page-title">
+              <h1 class="page-title rule">
                 {{ content.title }}
               </h1>
             </v-col>
@@ -22,7 +21,6 @@
         <v-container
           v-if="content"
           id="scrollArea"
-          fluid
         >
           <v-row>
             <v-col

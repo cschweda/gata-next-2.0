@@ -160,6 +160,9 @@ siteArray.forEach(obj => {
         meta.expires = item.expires
         meta.path = item.path
         meta.status = item.status
+        if (item.section === 'news') {
+          meta.html = item.html
+        }
         metaArray.push(meta)
         /**
          * ... write individual files to api folder...

@@ -7,4 +7,7 @@ const getContent = async (section, slug) =>
 const getAllFunding = async () =>
   await import(`@/static/api/meta/funding.json`).then(m => m.default || m)
 
-export { getContent, getAllFunding }
+const getAllNews = async () =>
+  await import(`@/static/api/meta/news.json`).then(m => m.default || m)
+
+export { getContent, getAllFunding, getAllNews }

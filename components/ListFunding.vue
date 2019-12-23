@@ -5,30 +5,22 @@
       :key="item.title"
     >
       <v-card
-        class="mb-10 elevation-1"
+        class="mb-10 elevation-1 py-6 px-6"
         @click="routeToItem(item)"
       >
         <div v-if="toggleState === 'expired'">
-          <div
-          
-            style="background: #EF5350; color: #fff; font-weight: bold; font-size: 20px"
-            class="px-2 py-2 text-xs-right"
-          >
-            EXPIRED
-          </div>
+          EXPIRED: {{ item.expires | format }}
         </div>
       
 
         <h2 class="px-3 pt-3">
-          <!-- <nuxt-link 
-            :to="`${item.path}`" 
-            class="link"
-          > -->
           {{ item.title }}
-          <!-- </nuxt-link> -->
         </h2>
         <v-card-text class="px-3">
           {{ item.excerpt }}
+        </v-card-text>
+        <v-card-text class="px-3 text-right">
+          Posted: {{ item.posted | format }}
         </v-card-text>
       </v-card>
     </div>
