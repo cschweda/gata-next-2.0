@@ -1,7 +1,9 @@
 <template>
   <v-app id="page-top">
     <app-nav />
-    <app-drawer />
+    <client-only>
+      <app-drawer />
+    </client-only>
     <v-content>
       <nuxt />
     </v-content>
