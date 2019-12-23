@@ -17,9 +17,9 @@
         <v-container fluid>
           <v-list-item>
             <v-list-item-content class="text-center">
-              <v-list-item-title style="font-weight: 900">
-                ICJIA GATA INFORMATION
-              </v-list-item-title>
+              <h2>
+                ICJIA GATA
+              </h2>
             </v-list-item-content>
           </v-list-item>
 
@@ -35,8 +35,8 @@
               link
             >
               <v-list-item-content>
-                <v-list-item-title
-                  style="font-weight: 700"
+                <h3
+                  style="font-weight: 700;"
                   @click="$router.push(item.slug)"
                 >
                   <span v-if="item.menuTitle">
@@ -45,7 +45,7 @@
                   <span v-else>
                     {{ item.title }}
                   </span>
-                </v-list-item-title>
+                </h3>
               </v-list-item-content>
             </v-list-item>
           </v-list>
