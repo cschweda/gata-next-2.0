@@ -1,6 +1,7 @@
 <template>
   <div>
-    <client-only placeholder="Loading...">
+    <client-only>
+      <Loader slot="placeholder" />
       <v-card color="white">
         <v-card-title>
           <v-spacer />
@@ -62,12 +63,14 @@
 <script>
 /* eslint-disable no-unused-vars */
 import NewsCard from '@/components/NewsCard'
+import Loader from '@/components/Loader'
 import { addAttributeToElement, dateFormat } from '@/services/Utilities'
 
 export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    NewsCard
+    NewsCard,
+    Loader
   },
 
   props: {

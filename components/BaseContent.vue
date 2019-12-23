@@ -2,7 +2,8 @@
   <div>
     <div
       v-if="!loading"
-      class="px-8 py-8"
+      class=""
+      style="margin-top: 100px"
     >
       <slot name="title" />
       <slot name="printer" />

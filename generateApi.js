@@ -160,6 +160,7 @@ siteArray.forEach(obj => {
         meta.expires = item.expires
         meta.path = item.path
         meta.status = item.status
+        meta.displayFooter = item.displayFooter
         if (item.section === 'news') {
           meta.html = item.html
         }

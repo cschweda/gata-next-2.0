@@ -5,4 +5,5 @@ excerpt: 'The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 
 menuItem: true
 position: 2
 section: 'pages'
+displayFooter: true
 ---

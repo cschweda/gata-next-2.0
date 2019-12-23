@@ -1,20 +1,18 @@
 <template>
   <div>
-    <base-content
-      id="baseContentTop"
-      :loading="loading"
+    <div
+      v-if="content"
+      class="text-center py-8"
+      style="background: #0D4474; margin-top: 90px;"
     >
-      <template v-slot:title>
-        <v-container
-          v-if="content"
-        >
-          <v-row class="text-center">
-            <v-col>
-              <h1>{{ content.title }}</h1>
-            </v-col>
-          </v-row>
-        </v-container>
-      </template>
+      <h1 style="color: #fff">
+        {{ content.title }}
+      </h1>
+    </div>
+    <base-content
+      :loading="loading"
+      style="margin-top: -100px"
+    >
       <template v-slot:content>
         <v-container
           v-if="content"

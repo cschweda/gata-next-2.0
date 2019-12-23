@@ -1,82 +1,82 @@
 <template>
-  <div>
-    <v-toolbar 
-      :clipped-left="clipped" 
-      color="grey lighten-4" 
-      app 
-      fixed>
+  <v-app-bar
+    color="white"
+    fixed
+    height="90"
+    class="noprint"
+  >
+    <div style="width: 15px" />
+
+    <img
+      :src="require('@/assets/icjia-logo.png')"
+      alt="Illinois Criminal Justice Information Authority"
+      :width="logoWidth()"
+      style="margin-left: -5px; margin-right: 8px;"
+      class="hover"
+      @click="
+        $router.push('/')
+      "
+    >&nbsp;&nbsp;&nbsp;&nbsp;
+    <v-toolbar-title
+      class="heavy hover"
+      @click="
+        $router.push('/')
+      "
+    >
+      <span
+        style=""
+        class="agency hover"
+      >ICJIA GATA INFORMATION</span>
+    </v-toolbar-title>
+    <v-spacer />
+   
+
+    <div class="flex-grow-1" />
+    <span
+      style="font-weight: 900"
+      class="hover"
+      @click="toggleDrawer"
+    >
+      MENU&nbsp;
+    </span>
+    <v-app-bar-nav-icon
       
-      <img 
-        src="../assets/img/logo-small.png" 
-        width="70"
-        alt="Illinois Criminal Justice Information Authority"
-        class="logo"
-        @click="gotoIcjia"
-      >
-      <v-toolbar-title class="display siteTitle">
-        
-        <nuxt-link 
-          to="/" 
-          class="noUnderline">
-         
-          <!-- <span style="color: #aaa">ICJIA&nbsp;&nbsp;|&nbsp;&nbsp;</span> -->
-          <span style="color: #333 !important">GATA INFORMATION</span>
-        </nuxt-link>
-      </v-toolbar-title>
-      <v-spacer/>
-      <v-toolbar-items class=" display">
-        <v-btn
-     
-          flat
-          style="font-weight: 900;"
-          @click="toggleSidebar"
-        >
-          <span class="hidden-sm-and-down">MENU&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <v-icon 
-             
-          >menu</v-icon>
-        </v-btn>
-       
-      </v-toolbar-items>
-     
-    </v-toolbar>
-  </div>
+      style="color: black"
+      large
+      @click="toggleDrawer"
+    />
+  </v-app-bar>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import { EventBus } from '@/event-bus.js'
-import MenuDropdown from '@/components/MenuDropdown.vue'
-
+/* eslint-disable vue/no-use-v-if-with-v-for */
+import { EventBus } from '@/event-bus'
 export default {
-  components: {
-    MenuDropdown
-  },
-  data() {
-    return {
-      empty: [],
-      clipped: true
-    }
-  },
-  computed: {
-    ...mapGetters(['funding', 'current']),
-    currentFundingOpps() {
-      return []
+  props: {
+    sections: {
+      type: Array,
+      default: () => []
     }
   },
   methods: {
-    toggleSidebar() {
-      EventBus.$emit('toggleSidebar')
+    toggleDrawer() {
+      EventBus.$emit('toggleDrawer')
     },
-    gotoIcjia() {
-      location.href = 'http://www.icjia.state.il.us'
+    logoWidth() {
+      //console.log(this.$vuetify.breakpoint);
+      if (this.$vuetify.breakpoint.xs) {
+        return 50
+      } else {
+        return 90
+      }
     }
   }
 }
 </script>
 
-<style scoped>
-.logo:hover {
-  cursor: pointer;
+<style>
+.agency {
+  font-weight: 900;
+  font-size: 24px;
 }
 </style>

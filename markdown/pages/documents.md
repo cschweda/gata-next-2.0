@@ -5,6 +5,7 @@ excerpt: 'ICJIA GATA Documents. The Grant Accountability and Transparency Act (G
 menuItem: true
 position: 5
 section: 'pages'
+displayFooter: true
 ---
 
 <div style="background: #0D4474">

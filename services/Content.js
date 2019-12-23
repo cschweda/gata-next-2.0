@@ -10,4 +10,7 @@ const getAllFunding = async () =>
 const getAllNews = async () =>
   await import(`@/static/api/meta/news.json`).then(m => m.default || m)
 
-export { getContent, getAllFunding, getAllNews }
+const getAllPages = async () =>
+  await import(`@/static/api/meta/pages.json`).then(m => m.default || m)
+
+export { getContent, getAllFunding, getAllNews, getAllPages }

@@ -1,18 +1,31 @@
 <template>
-  <v-app>
+  <v-app id="page-top">
+    <app-nav />
+    <app-drawer />
     <v-content>
-      <!-- Provides the application the proper gutter -->
-   
-      <!-- If using vue-router -->
-        
-       
       <nuxt />
     </v-content>
+   
+    <app-footer />
   </v-app>
 </template>
 <script>
+import AppNav from '@/components/AppNav'
+import AppFooter from '@/components/AppFooter'
+import AppDrawer from '@/components/AppDrawer'
 export default {
-  transition: 'default'
+  transition: 'default',
+  components: {
+    AppNav,
+    AppFooter,
+    AppDrawer
+  },
+  data() {
+    return {
+      loading: true,
+      pages: []
+    }
+  }
 }
 </script>
 
@@ -26,5 +39,8 @@ export default {
 .page-enter,
 .page-leave-to {
   opacity: 0;
+}
+.hover {
+  cursor: pointer !important;
 }
 </style>

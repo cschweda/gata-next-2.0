@@ -5,4 +5,5 @@ excerpt: 'ICJIA GATA News & Announcements. The Grant Accountability and Transpar
 menuItem: false
 position: 999
 section: 'pages'
+displayFooter: true
 ---

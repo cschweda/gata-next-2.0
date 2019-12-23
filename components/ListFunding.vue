@@ -5,7 +5,7 @@
       :key="item.title"
     >
       <v-card
-        class="mb-10 elevation-1 py-6 px-6"
+        class="mb-10 elevation-1 py-6"
         @click="routeToItem(item)"
       >
         <div v-if="toggleState === 'expired'">
