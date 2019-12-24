@@ -36,6 +36,7 @@
       style="font-weight: 900"
       class="hover"
       @click="toggleDrawer"
+      class="hidden-sm-and-down"
     >
       MENU&nbsp;
     </span>
