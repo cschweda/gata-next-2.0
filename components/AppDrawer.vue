@@ -37,7 +37,7 @@
               <v-list-item-content>
                 <h3
                   style="font-weight: 700;"
-                  @click="$router.push(item.slug)"
+                  @click="$router.push(`/${item.slug}`)"
                 >
                   <span v-if="item.menuTitle">
                     {{ item.menuTitle }}
