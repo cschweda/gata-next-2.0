@@ -63,6 +63,7 @@ a {
   padding-right: 25px;
   width: 100%;
   height: 100%;
+  min-height: 300px !important;
 }
 
 .dynamic-content h2 {
@@ -80,5 +81,8 @@ a {
 h1.page-title {
   text-transform: uppercase;
   border-bottom: 1px solid #aaa;
+}
+
+iframe {
 }
 </style>
