@@ -129,7 +129,7 @@ export default {
 }
 
 .visible {
-  color: #057879;
+  color: #116bb9 !important;
   font-weight: bold;
 }
 .anchor {

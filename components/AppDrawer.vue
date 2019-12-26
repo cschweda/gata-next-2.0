@@ -7,12 +7,12 @@
     
     temporary
   >
-    <div
-      style="font-size: 24px; font-weight: bold; background: #ccc;"
+    <!-- <div
+      style="font-size: 24px; font-weight: bold; background: #0D4474; color: #fff"
       class="text-center py-4"
     >
       ICJIA GATA INFORMATION
-    </div>
+    </div> -->
     <v-layout 
       sidebar-height 
       column 
@@ -62,16 +62,17 @@
           src="@/assets/icjia-logo.png"
           class="logo mt-3"
           height="40"
+          alt="Illinois Criminal Justice Information Authority"
           @click="goto('http://www.icjia.state.il.us')"
         >
-        <h5>
+        <h5 style="font-size: 12px">
           <a
             href="https://github.com/ICJIA/icjia-gata-next"
             class="sidebar-footer-link"
           >View on Github</a>
         </h5>
         <h5 
-          style="color: #666; font-weight: 400 !important;" 
+          style="color: #666; font-size: 12px" 
           class="mt-2"
         >
           &copy;&nbsp;2019
@@ -130,6 +131,11 @@ export default {
 }
 
 .sidebar-height {
-  min-height: 88vh;
+  /* min-height: 88vh; */
+  min-height: 98vh;
+}
+
+h5 a {
+  text-decoration: none;
 }
 </style>

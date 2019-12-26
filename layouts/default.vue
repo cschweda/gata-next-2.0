@@ -32,6 +32,10 @@ export default {
 </script>
 
 <style>
+a {
+  color: #0d4474;
+  font-weight: 900;
+}
 .page-enter-active,
 .page-leave-active {
   transition-property: opacity;
@@ -68,7 +72,9 @@ export default {
   padding-bottom: 5px;
 }
 
-.dynamic-content h3 {
+.dynamic-content a {
+  color: #116bb9 !important;
+  font-weight: 900 !important;
 }
 
 h1.page-title {
