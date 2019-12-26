@@ -24,7 +24,7 @@
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-named-headers": "0.0.4",
     "nuxt": "^2.11.0",
-    "slug": "^1.1.0",
+    "slug": "^2.0.0",
     "vuetify": "^2.1.15"
   },
   "devDependencies": {
