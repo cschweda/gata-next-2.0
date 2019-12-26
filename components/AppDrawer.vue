@@ -7,6 +7,12 @@
     
     temporary
   >
+    <div
+      style="font-size: 24px; font-weight: bold; background: #ccc;"
+      class="text-center py-4"
+    >
+      ICJIA GATA INFORMATION
+    </div>
     <v-layout 
       sidebar-height 
       column 
@@ -15,16 +21,6 @@
     >
       <v-row class="fill-height">
         <v-container fluid>
-          <v-list-item>
-            <v-list-item-content class="text-center">
-              <h2>
-                ICJIA GATA
-              </h2>
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-divider />
-
           <v-list
             v-if="pages"
             dense
@@ -36,6 +32,14 @@
             >
               <v-list-item-content>
                 <h3
+                  v-if="item.slug==='home'"
+                  style="font-weight: 700;"
+                  @click="$router.push(`/`)"
+                >
+                  Home
+                </h3>
+                <h3
+                  v-else
                   style="font-weight: 700;"
                   @click="$router.push(`/${item.slug}`)"
                 >
@@ -106,7 +110,10 @@ export default {
     }
   },
   async created() {
-    this.pages = await getAllPages()
+    const pages = await getAllPages()
+    this.pages = pages.filter(p => {
+      return p.status === 'live'
+    })
     this.loading = false
   },
   mounted() {
@@ -123,6 +130,6 @@ export default {
 }
 
 .sidebar-height {
-  min-height: 100vh;
+  min-height: 88vh;
 }
 </style>

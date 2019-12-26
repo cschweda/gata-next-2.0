@@ -160,6 +160,12 @@ siteArray.forEach(obj => {
         meta.expires = item.expires
         meta.path = item.path
         meta.status = item.status
+        if (item.showToc) {
+          meta.showToc = item.showToc
+        } else {
+          meta.showToc = false
+        }
+
         if (item.menuTitle) {
           meta.menuTitle = item.menuTitle
         }
@@ -183,6 +189,7 @@ siteArray.forEach(obj => {
         `./static/api/meta/${obj}.json`,
         JSON.stringify(metaArray)
       )
+      console.log(`${obj}.json generated`)
     },
     error => console.log(error)
   )

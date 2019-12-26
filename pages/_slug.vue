@@ -10,7 +10,7 @@
         >
           <v-row class="text-left">
             <v-col cols="12">
-              <h1 class="page-title rule">
+              <h1 class="page-title">
                 {{ content.title }}
               </h1>
             </v-col>
@@ -55,6 +55,9 @@ export default {
   mixins: [handleClicks],
   async asyncData({ isDev, redirect, params }) {
     try {
+      if (params.slug === 'home') {
+        redirect('/')
+      }
       let content = await getContent('pages', params.slug)
       let loading = false
       return { content, loading }

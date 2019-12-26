@@ -6,6 +6,7 @@ expires: '2019-07-01'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting applications for grants for the Services for Underserved Areas and Victim Groups Program. Grants will be made with FFY18 Violence Against Women Act funds. A total of $1.4 million is available through this solicitation for use over a period of 12 months. '
 status: 'live'
 section: 'funding'
+showToc: true
 ---
 
 [LINK TO NOFO](VOCADVHotlineNOFO.docx) {.text-xs-center .nofo-link}

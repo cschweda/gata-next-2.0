@@ -6,6 +6,7 @@ expires: '2019-12-01'
 excerpt: 'ICJIA is requesting proposals for FFY18 Victims of Crime Act grants to support the development or expansion of transitional housing and related costs. A total of $5 million in funding is available through this solicitation for use over a period of 12 months. '
 status: 'live'
 section: 'funding'
+showToc: true
 ---
 
 [LINK TO NOFO](NOFO.VOCA.TH.pdf) {.text-xs-center .nofo-link}
@@ -86,7 +87,7 @@ The following documents must be emailed to CJA.VOCA.THNOFO@illinois.gov by the *
 
 ### Questions
 
-Questions regarding this NOFO may be submitted to CJA.VOCA.THNOFO@illinois.gov until 11:59 p.m. November 20, 2019. 
+Questions regarding this NOFO may be submitted to CJA.VOCA.THNOFO@illinois.gov until 11:59 p.m. November 20, 2019.
 
 [Download the latest questions and answers](VOCA.TH.FAQs.docx).
 

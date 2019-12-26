@@ -6,6 +6,7 @@ expires: '2019-12-12'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting applications for state grants to establish and enhance trauma recovery centers.'
 status: 'live'
 section: 'funding'
+showToc: true
 ---
 
 [LINK TO NOFO](SFY20TraumaRecoveryCenterNOFO.pdf) {.text-xs-center .nofo-link}

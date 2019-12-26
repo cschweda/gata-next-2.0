@@ -6,26 +6,27 @@ expires: '2019-03-03'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting applications for grants for the Services for Victims of Domestic Violence Program. Grants will be made with FFY17 Victims of Crime Act funds. A total of $21.3 million is available through this solicitation for use over a period of 12 months. '
 status: 'live'
 section: 'funding'
+showToc: true
 ---
-
 
 [CLICK FOR NOFO](ICADVLeadEntityNOFO.docx) {.text-xs-center .nofo-link}
 
-The Illinois Criminal Justice Information Authority is requesting applications for grants for the Services for Victims of Domestic Violence Program. Grants will be made with FFY17 Victims of Crime Act funds. A total of $21.3 million is available through this solicitation for use over a period of 12 months. 
+The Illinois Criminal Justice Information Authority is requesting applications for grants for the Services for Victims of Domestic Violence Program. Grants will be made with FFY17 Victims of Crime Act funds. A total of $21.3 million is available through this solicitation for use over a period of 12 months.
 
 ## Application Deadline
 
-Application materials must be received by **11:59 p.m. on Sunday, March 3, 2019.** 
+Application materials must be received by **11:59 p.m. on Sunday, March 3, 2019.**
 
 ## Program Requirements
 
-As part of the recommendations established by the Victim Services Ad Hoc Committee, the strengthening and expansion of core services for victims of crime was identified as a priority. To fulfill this priority, ICJIA has made available VOCA grant funding for core services and related support costs for victims of domestic violence. These funds will be made available to the Illinois Coalition Against Domestic Violence. 
+As part of the recommendations established by the Victim Services Ad Hoc Committee, the strengthening and expansion of core services for victims of crime was identified as a priority. To fulfill this priority, ICJIA has made available VOCA grant funding for core services and related support costs for victims of domestic violence. These funds will be made available to the Illinois Coalition Against Domestic Violence.
 
 ## Eligibility Information
 
-Agencies must be pre-qualified through the Grant Accountability and Transparency Act (GATA) Grantee Portal, https://grants.illinois.gov/portal/, to become eligible to apply for an award.  Applicants must have completed the GATA pre-qualification process and received approval of their Internal Control Questionnaire (ICQ) by the date of period of performance start date, July 1, 2019 to be considered for funding. 
+Agencies must be pre-qualified through the Grant Accountability and Transparency Act (GATA) Grantee Portal, https://grants.illinois.gov/portal/, to become eligible to apply for an award. Applicants must have completed the GATA pre-qualification process and received approval of their Internal Control Questionnaire (ICQ) by the date of period of performance start date, July 1, 2019 to be considered for funding.
 
 ## Eligible Applicants
+
 This solicitation is open to the Illinois Coalition Against Domestic Violence, 806 S. College Street, Springfield, Illinois, 62704.
 
 ## Deadline
@@ -34,13 +35,14 @@ Completed application materials must be emailed to NOFOemail@Illinois.gov by **1
 
 ## Available Funds
 
-Grants available through this funding opportunity are a portion of FFY17 Victims of Crime Act funds. A minimum of $21.3 million will be made available through this funding opportunity.  
+Grants available through this funding opportunity are a portion of FFY17 Victims of Crime Act funds. A minimum of $21.3 million will be made available through this funding opportunity.
 
 ## Period of Performance
 
-Funding is available for the period of July 1, 2019, through June 30, 2020. 
+Funding is available for the period of July 1, 2019, through June 30, 2020.
 
 ## Technical Assistance Session
+
 N/A
 
 ## Timeline
@@ -63,17 +65,18 @@ In addition, funded programs will be required to report performance measures thr
 
 ## Required Documents
 
-The following documents must be emailed to NOFOemail@Illinois.gov by the **11:59 p.m., Sunday, March 3, 2019,** deadline for application review. 
+The following documents must be emailed to NOFOemail@Illinois.gov by the **11:59 p.m., Sunday, March 3, 2019,** deadline for application review.
 
-* [Completed and signed Uniform State Grant Application (Word)](ICADVapplication.pdf) 
-* [Completed Program Narrative (Word)](ICADVprogramnarrative.docx)
-* [Completed Budget/Budget Narrative (Excel)](ICADVbudget.xls.xlsx)
+- [Completed and signed Uniform State Grant Application (Word)](ICADVapplication.pdf)
+- [Completed Program Narrative (Word)](ICADVprogramnarrative.docx)
+- [Completed Budget/Budget Narrative (Excel)](ICADVbudget.xls.xlsx)
 
 ## Questions
 
-Questions regarding this NOFO may be submitted to NOFOemail@Illinois.gov until **11:59 p.m. on March 3, 2019.**  
+Questions regarding this NOFO may be submitted to NOFOemail@Illinois.gov until **11:59 p.m. on March 3, 2019.**
 
 ## Contact Information
+
 Ronnie J. Reichgelt
 
 Illinois Criminal Justice Information Authority

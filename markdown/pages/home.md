@@ -8,6 +8,8 @@ section: 'pages'
 hideBreadcrumb: true
 displayFooter: false
 menuTitle: 'Home'
+showToc: false
+status: 'live'
 ---
 
 <div class="layout row wrap">

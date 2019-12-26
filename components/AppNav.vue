@@ -34,9 +34,8 @@
     <div class="flex-grow-1" />
     <span
       style="font-weight: 900"
-      class="hover"
+      class="hover hidden-sm-and-down"
       @click="toggleDrawer"
-      class="hidden-sm-and-down"
     >
       MENU&nbsp;
     </span>

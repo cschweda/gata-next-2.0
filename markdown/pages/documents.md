@@ -6,6 +6,8 @@ menuItem: true
 position: 5
 section: 'pages'
 displayFooter: true
+showToc: false
+status: 'live'
 ---
 
 <div style="background: #0D4474">

@@ -1,11 +1,12 @@
 ---
 title: 'Notice of Funding Opportunity to Enhance and Expand Existing Street Intervention Programming'
 created: '2019-12-16'
-posted: '2019-12-16'
+posted: '2019-12-26'
 expires: '2020-01-16'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting proposals for grants to Enhance and Expand Existing Street Intervention Programming'
 status: 'live'
 section: 'funding'
+showToc: true
 ---
 
 [LINK TO NOFO](NOFO.pdf) {.text-xs-center .nofo-link}

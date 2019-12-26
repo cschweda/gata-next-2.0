@@ -5,6 +5,7 @@ posted: '2017-04-04'
 excerpt: 'Announcing the public release of the Catalog of State Financial Assistance (CSFA) and the Grantee Compliance Enforcement System.'
 status: 'live'
 section: 'news'
+showToc: false
 ---
 
 ## CATALOG OF STATE FINANCIAL ASSISTANCE

@@ -6,27 +6,27 @@ expires: '2019-09-19'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting proposals for grant funding for the Safe From the Start (SFS) Evaluation program. Grants will be made with General Revenue State Fiscal Year 2020 funds. A total of $123,900 in funding is available through this solicitation for use over a period of eight months. '
 status: 'live'
 section: 'funding'
+showToc: true
 ---
-
 
 [LINK TO NOFO](SFSEFY20NOFO.pdf) {.text-xs-center .nofo-link}
 
-The Illinois Criminal Justice Information Authority is requesting proposals for grant funding for the Safe From the Start (SFS) Evaluation program. Grants will be made with General Revenue State Fiscal Year 2020 funds. A total of $123,900 in funding is available through this solicitation for use over a period of eight months. 
+The Illinois Criminal Justice Information Authority is requesting proposals for grant funding for the Safe From the Start (SFS) Evaluation program. Grants will be made with General Revenue State Fiscal Year 2020 funds. A total of $123,900 in funding is available through this solicitation for use over a period of eight months.
 
 **Application deadline: 11:59 p.m., September 19, 2019.**
 
 ## Program Requirements
 
-* The evaluation team will meet at least twice a year with ICJIA and/or SFS grantees to discuss evaluation reports, evaluation protocols, data entry procedures, etc.
-*	Provide evaluation training and technical assistance to grantees.
-*	Submit IRB review application to grantee’s Institutional Review Board.
-* Convert online MSAccess data from sites into SPSS data.  Merge data from all sites together for each evaluation measure (BIF, ASQ, ASQ-SE, SSQ, PSI, CBCL, Child and Caregiver Completion of Services forms).  Clean and organize SPSS data. Match pre, interim, post, and follow-up data for each repeated measure (ASQ-SE, PSI, and CBCL).  Examine data for out-of-range errors, outliers, and begin to analyze data for the Year End Report.
-* Submit aggregate Year End (covering SFY 2018) report comparing SFS data across sites and across years to ICJIA. The report must of publishable quality. The interim report should be similar to the final report in design and substance and document progress and findings to date.
-* Submit Individual Year End site reports to ICJIA.
+- The evaluation team will meet at least twice a year with ICJIA and/or SFS grantees to discuss evaluation reports, evaluation protocols, data entry procedures, etc.
+- Provide evaluation training and technical assistance to grantees.
+- Submit IRB review application to grantee’s Institutional Review Board.
+- Convert online MSAccess data from sites into SPSS data. Merge data from all sites together for each evaluation measure (BIF, ASQ, ASQ-SE, SSQ, PSI, CBCL, Child and Caregiver Completion of Services forms). Clean and organize SPSS data. Match pre, interim, post, and follow-up data for each repeated measure (ASQ-SE, PSI, and CBCL). Examine data for out-of-range errors, outliers, and begin to analyze data for the Year End Report.
+- Submit aggregate Year End (covering SFY 2018) report comparing SFS data across sites and across years to ICJIA. The report must of publishable quality. The interim report should be similar to the final report in design and substance and document progress and findings to date.
+- Submit Individual Year End site reports to ICJIA.
 
 ## Eligibility Information
 
-Agencies must be pre-qualified through the Grant Accountability and Transparency Act (GATA) Grantee Portal, https://grants.illinois.gov/portal/, to become eligible to apply for an award.  Applicants must have completed the GATA pre-qualification process and received approval of their Internal Control Questionnaire (ICQ) by the period of performance start date, October 31, 2019 to be considered for funding.  
+Agencies must be pre-qualified through the Grant Accountability and Transparency Act (GATA) Grantee Portal, https://grants.illinois.gov/portal/, to become eligible to apply for an award. Applicants must have completed the GATA pre-qualification process and received approval of their Internal Control Questionnaire (ICQ) by the period of performance start date, October 31, 2019 to be considered for funding.
 
 ## Eligible Applicants
 
@@ -38,11 +38,11 @@ Completed application materials must be emailed to CJA.StateViolencePrevention@I
 
 ## Available Funds
 
-Grants available through this funding opportunity are a portion of state fiscal year 2020 funds. A maximum of $123,900 dollars will be made available through this funding opportunity.   
+Grants available through this funding opportunity are a portion of state fiscal year 2020 funds. A maximum of $123,900 dollars will be made available through this funding opportunity.
 
 ### Period of Performance
 
-Funding is available for the period of October 31, 2019 to June 30, 2020. 
+Funding is available for the period of October 31, 2019 to June 30, 2020.
 
 ## Timeline
 
@@ -62,9 +62,9 @@ Recipients must submit periodic financial reports, periodic performance reports,
 
 The following documents must be emailed to CJA.StateViolencePrevention@Illinois.gov by the **11:59 p.m., September 19, 2019**, deadline for application review. Click the links below to download copies.
 
-* [Completed and signed Uniform State Grant Application (Word)](SFSEVALAPPLICATION.docx) 
-* [Completed Program Narrative (PDF)](SFSEVALNARRATIVE.docx)
-* [Completed Budget/Budget Narrative (Excel)](SFSEVAL.BUDGET.xlsx)
+- [Completed and signed Uniform State Grant Application (Word)](SFSEVALAPPLICATION.docx)
+- [Completed Program Narrative (PDF)](SFSEVALNARRATIVE.docx)
+- [Completed Budget/Budget Narrative (Excel)](SFSEVAL.BUDGET.xlsx)
 
 ## Questions
 
@@ -82,11 +82,4 @@ Illinois Criminal Justice Information Authority
 
 Springfield, IL 62701
 
-CJA.StateViolencePrevention@Illinois.gov 
-
-
-
-
-
-
-
+CJA.StateViolencePrevention@Illinois.gov

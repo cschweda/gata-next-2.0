@@ -6,6 +6,7 @@ expires: '2019-10-02'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting proposals for grant funding for the Safe From the Start (SFS) Evaluation program. Grants will be made with General Revenue State Fiscal Year 2020 funds. A total of $123,900 in funding is available through this solicitation for use over a period of eight months.'
 status: 'live'
 section: 'funding'
+showToc: true
 ---
 
 [LINK TO NOFO](SFSEFY20NOFO.PDF) {.text-xs-center .nofo-link}

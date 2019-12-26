@@ -7,6 +7,8 @@ menuItem: true
 position: 5
 section: 'pages'
 displayFooter: true
+showToc: false
+status: 'live'
 ---
 
 GATA technical assistance information will be posted shortly.

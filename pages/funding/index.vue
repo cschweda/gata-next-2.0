@@ -22,19 +22,19 @@
           v-if="content"
           id="scrollArea"
         >
-          <v-col
-            cols="12"
-            sm="12"
-            md="12"
-          >
-            <toggle />
-            <list-funding
-              :key="renderKey"
-              :funding="funding"
-              :toggle-state="toggleState"
-              @click="updateRenderKey()"
-            />
-          </v-col>
+          <v-row>
+            <v-col
+              cols="12"
+              sm="12"
+              md="12"
+            >
+              <toggle />
+              <list-funding
+              
+                :funding="funding"
+                :toggle-state="toggleState"
+              />
+            </v-col>
           </v-row>
         </v-container>
       </template>
@@ -74,8 +74,7 @@ export default {
       hideExpired: true,
       content: null,
       loading: true,
-      toggleState: null,
-      renderKey: 0
+      toggleState: null
     }
   },
   created() {
@@ -84,11 +83,7 @@ export default {
       //console.log(this.toggleState)
     })
   },
-  methods: {
-    updateRenderey() {
-      return this.renderKey++
-    }
-  }
+  methods: {}
 }
 </script>
 

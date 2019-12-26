@@ -5,6 +5,9 @@ excerpt: 'ICJIA GATA Frequently Asked Questions. The Grant Accountability and Tr
 menuItem: true
 position: 4
 section: 'pages'
+displayFooter: true
+showToc: false
+status: 'live'
 ---
 
 <details><summary>I have a program and am in need of grant funding. What programs do you administer?</summary>
@@ -33,10 +36,9 @@ Please [contact the Authority via email](mailto:cja.irc@illinois.gov) or call (3
 
 This webinar answers frequently asked questions about the grant review process. Topics include rules and regulations, common errors on applications, certifications, and budgetary issues.
 
-<div class="text-xs-center mt-5">
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/g18hgiS3RYI/0.jpg)](https://www.youtube.com/watch?v=g18hgiS3RYI)
-
-### Click to play video on YouTube
+<div class="text-center mt-5 mb-12">
+<div class="videoWrapper">
+<iframe src="https://www.youtube.com/embed/g18hgiS3RYI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 </div>

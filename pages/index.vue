@@ -9,6 +9,7 @@
         {{ content.title }}
       </h1>
     </div>
+    
     <base-content
       :loading="loading"
       style="margin-top: -100px"
@@ -43,10 +44,9 @@
               <h2>Funding Opportunities</h2>
               <toggle />
               <list-funding
-                :key="renderKey"
+                
                 :funding="funding"
                 :toggle-state="toggleState"
-                @click="updateRenderKey()"
               />
             </v-col>
           </v-row>
@@ -88,8 +88,7 @@ export default {
       hideExpired: true,
       content: null,
       loading: true,
-      toggleState: null,
-      renderKey: 0
+      toggleState: null
     }
   },
   created() {
@@ -98,11 +97,7 @@ export default {
       //console.log(this.toggleState)
     })
   },
-  methods: {
-    updateRenderey() {
-      return this.renderKey++
-    }
-  }
+  methods: {}
 }
 </script>
 

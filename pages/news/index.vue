@@ -66,8 +66,7 @@ export default {
       hideExpired: true,
       content: null,
       loading: true,
-      toggleState: null,
-      renderKey: 0
+      toggleState: null
     }
   },
   created() {},

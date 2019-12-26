@@ -17,7 +17,7 @@
           :key="link.title"
           class="flexitem"
         >
-          <span v-if="link.displayFooter">
+          <span v-if="link.displayFooter && link.status === 'live'">
             <v-btn
               :to="link.slug === 'home' ? '/' : `/${link.slug}`"
               depressed
