@@ -26,7 +26,7 @@
             <v-col
               cols="12"
               sm="12"
-              md="12"
+              :md="dynamicFlex()"
               order-md="1"
               order="2"
               order-sm="2"
@@ -35,6 +35,20 @@
                 class="dynamic-content"
                 @click="handleClicks"
                 v-html="content.html"
+              />
+            </v-col>
+            <v-col
+              v-if="showToc"
+              cols="12"
+              sm="12"
+              md="3"
+              order-md="2"
+              order="1"
+              order-sm="1"
+            >
+              <TOC
+                selector="#scrollArea"
+                top="#baseContentTop"
               />
             </v-col>
           </v-row>
@@ -46,11 +60,13 @@
 
 <script>
 import BaseContent from '@/components/BaseContent'
+import TOC from '@/components/TOC'
 import { getContent } from '@/services/Content'
 import { handleClicks } from '@/mixins/handleClicks'
 export default {
   components: {
-    BaseContent
+    BaseContent,
+    TOC
   },
   mixins: [handleClicks],
   async asyncData({ isDev, redirect, params }) {
@@ -73,7 +89,20 @@ export default {
     return {
       hideExpired: true,
       content: null,
-      loading: true
+      loading: true,
+      showToc: false
+    }
+  },
+  created() {
+    this.showToc = this.content.showToc
+  },
+  methods: {
+    dynamicFlex() {
+      if (this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm) {
+        return '12'
+      } else {
+        return this.showToc ? '9' : '12'
+      }
     }
   }
 }

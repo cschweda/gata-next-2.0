@@ -169,7 +169,7 @@ ul.toc-list li:hover {
   color: #065f60;
   background: #eee;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 960px) {
   .divider {
     border-left: 0px solid #ccc;
   }
