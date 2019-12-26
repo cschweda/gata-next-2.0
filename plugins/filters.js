@@ -1,11 +1,11 @@
 import Vue from 'vue'
 
-Vue.filter('toUpper', function(value) {
-  return value.toUpperCase()
+Vue.filter('lowerCase', function(value) {
+  return value.toLowerCase()
 })
 
-Vue.filter('toLower', function(value) {
-  return value.toLowerCase()
+Vue.filter('upperCase', function(str) {
+  return str.toUpperCase()
 })
 
 Vue.filter('format', function(d) {

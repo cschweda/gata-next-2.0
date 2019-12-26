@@ -6,7 +6,7 @@ menuItem: true
 position: 5
 section: 'pages'
 displayFooter: true
-showToc: false
+showToc: true
 status: 'live'
 ---
 
