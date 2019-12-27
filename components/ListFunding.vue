@@ -12,28 +12,10 @@
       v-for="item in filteredFunding"
       :key="item.title"
     >
-      <v-card
-        class="mb-10 elevation-1 py-6"
-        @click="routeToItem(item)"
-      >
-        <div v-if="toggleState === 'expired'">
-          EXPIRED: {{ item.expires | format }}
-        </div>
-        <div v-else>
-          Expires: {{ item.expires | format }}
-        </div>
-      
-
-        <h2 class="px-3 pt-3">
-          {{ item.title }}
-        </h2>
-        <v-card-text class="px-3">
-          {{ item.excerpt }}
-        </v-card-text>
-        <v-card-text class="px-3 text-right">
-          Posted: {{ item.posted | format }}
-        </v-card-text>
-      </v-card>
+      <funding-card
+        :item="item"
+        :toggle-state="toggleState"
+      />
     </div>
   </div>
 </template>
@@ -96,11 +78,6 @@ export default {
         })
       }
       this.filteredFunding = filteredFunding
-    }
-  },
-  methods: {
-    routeToItem(item) {
-      this.$router.push(item.path)
     }
   }
 }

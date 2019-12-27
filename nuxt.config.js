@@ -13,7 +13,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'en'
     },
-    titleTemplate: 'ICJIA GATA | %s',
+    titleTemplate: '%s',
 
     meta: [
       { charset: 'utf-8' },

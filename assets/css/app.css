@@ -75,7 +75,8 @@ h1.page-title {
 }
 
 .isExpired.v-input--selection-controls.v-input .v-label {
-  color: #d84315;
+  /* color: #d84315; */
+  color: #333;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;

@@ -4,6 +4,17 @@
       id="baseContentTop"
       :loading="loading"
     >
+      <template 
+        v-if="isExpired" 
+        slot="expired"
+      >
+        <div
+          style="background: #EF5350; color: #fff; font-weight: bold; font-size: 20px"
+          class="mt-0 px-2 py-10 mb-8 text-center"
+        >
+          THIS FUNDING OPPORTUNITY HAS EXPIRED
+        </div>
+      </template>
       <template v-slot:title>
         <v-container
           v-if="content"
@@ -26,7 +37,7 @@
             <v-col
               cols="12"
               sm="12"
-              :md="dynamicFlex()"
+              md="9"
               order-md="1"
               order="2"
               order-sm="2"
@@ -38,7 +49,7 @@
               />
             </v-col>
             <v-col
-              v-if="showToc"
+             
               cols="12"
               sm="12"
               md="3"
@@ -88,6 +99,17 @@ export default {
       content: null,
       loading: true,
       showToc: false
+    }
+  },
+  computed: {
+    isExpired() {
+      const today = new Date()
+      const target = new Date(today.setHours(0, 0, 0, 0))
+      if (new Date(this.content.expires) < target) {
+        return true
+      } else {
+        return false
+      }
     }
   },
   created() {

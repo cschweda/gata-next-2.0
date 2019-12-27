@@ -3,8 +3,9 @@
     <div
       v-if="!loading"
       class=""
-      style="margin-top: 100px"
+      style="margin-top: 90px"
     >
+      <slot name="expired" />
       <slot name="title" />
       <slot name="printer" />
       <slot name="content" />

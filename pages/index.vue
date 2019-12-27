@@ -109,7 +109,7 @@ export default {
   },
   methods: {},
   head: {
-    title: 'Home'
+    title: 'ICJIA GATA Home'
     // meta: [
     //   { hid: 'description', name: 'description', content: 'About page description' }
     // ]
