@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](NOFO.pdf) {.text-xs-center .nofo-link}
+[LINK TO NOFO](NOFO.pdf) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting proposals for grants to Enhance and Expand Existing Street Intervention Programming. Grants will be made with SFY20 Violence Prevention and Street Intervention funds. A total of $1,894,653 in funding is available for services provided throughout the State of Illinois (with the exception of the City of Chicago) through this solicitation for use over a period of approximately 3.5 (three and a half) months.
 
@@ -55,7 +55,7 @@ Information provided during these webinar recordings will be unofficial and not 
 
 Agencies interested in applying are asked to submit an online Notice of Intent by **11:59 p.m., January 9, 2020.**
 
-[Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_1S7fGy9HWSkJ1E9) {.text-xs-center .NOI}
+[Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_1S7fGy9HWSkJ1E9) {.text-center .NOI}
 
 ## Range of Grant Awards
 
@@ -92,7 +92,7 @@ The following documents must be emailed to CJA.StateViolencePrevention@Illinois.
 
 - [Completed Budget/Budget Narrative (Excel)](Budget.xlsx)
 
-[DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](VPSIExpansionZip.zip) {.text-xs-center .Zip-Docs}
+[DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](VPSIExpansionZip.zip) {.text-center .Zip-Docs}
 
 ## Questions
 

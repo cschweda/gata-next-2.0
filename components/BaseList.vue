@@ -2,7 +2,7 @@
   <div>
     <div v-if="items.length===0">
       <h2 
-        class="text-xs-center py-5" 
+        class="text-center py-5" 
         style="color: #777">{{ empty }}</h2>
     </div>
     <div 

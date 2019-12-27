@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](VOCAStatewideInfoNetNOFO.docx) {.text-xs-center .nofo-link}
+[LINK TO NOFO](VOCAStatewideInfoNetNOFO.docx) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority seeks to fund a Statewide InfoNet program. The grant will be made with Federal Fiscal Year 2017 (FFY17) Victim of Crime Act (VOCA) funds. A total of $556,024 in funding is available through this solicitation for use over a period of 12 months.
 

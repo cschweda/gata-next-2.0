@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](IllinoisHEALSDemoNOFO.pdf) {.text-xs-center .nofo-link}
+[LINK TO NOFO](IllinoisHEALSDemoNOFO.pdf) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting a proposal for one Illinois HEALS Demonstration site grant. Grants will be made with VICTIMS OF CRIME ACT FFY 17 funds. A total of $ 800,000 in funding is available through this solicitation for use over a period of 12 months.
 

@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](VOCADVHotlineNOFO.docx) {.text-xs-center .nofo-link}
+[LINK TO NOFO](VOCADVHotlineNOFO.docx) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority seeks to fund a Statewide Domestic Violence Hotline Service program. The grant will be made with Federal Fiscal Year 2017 (FFY17) Victim of Crime Act (VOCA) funds. A total of $455,000 in funding is available through this solicitation for use over a period of 12 months.
 **Application deadline: 11:59 p.m., July 01, 2019.**

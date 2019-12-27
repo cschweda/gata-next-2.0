@@ -160,11 +160,17 @@ siteArray.forEach(obj => {
         meta.expires = item.expires
         meta.path = item.path
         meta.status = item.status
-        if (item.showToc) {
-          meta.showToc = item.showToc
-        } else {
-          meta.showToc = false
-        }
+        // if (item.showToc) {
+        //   meta.showToc = item.showToc
+        // } else {
+        //   meta.showToc = false
+        // }
+
+        // if (item.enableTracking) {
+        //   meta.enableTracking = item.enableTracking
+        // } else {
+        //   meta.enableTracking = false
+        // }
 
         if (item.menuTitle) {
           meta.menuTitle = item.menuTitle

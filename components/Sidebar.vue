@@ -48,7 +48,7 @@
       </div>
       <v-spacer/>
       <v-divider/>
-      <div class="text-xs-center mb-3 pt-3 py-3">
+      <div class="text-center mb-3 pt-3 py-3">
         <img
           src="@/assets/img/logo-small.png"
           class="logo"

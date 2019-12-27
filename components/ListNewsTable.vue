@@ -43,7 +43,7 @@
           </template>
 
           <template v-slot:expanded-item="{ headers, item }">
-            <td :colspan="headers.length + 2">
+            <td :colspan="headers.length + 1">
               <div class="py-5">
                 <NewsCard
                   :content="item"

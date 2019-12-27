@@ -8,11 +8,12 @@ section: 'pages'
 displayFooter: true
 showToc: true
 status: 'live'
+enableTracking: true
 ---
 
 <div style="background: #0D4474">
 
-<div style="font-size: 28px; font-weight: bold; color: #fff" class="text-xs-center py-4">The following forms are samples and not for use.</div>
+<div style="font-size: 28px; font-weight: bold; color: #fff" class="text-center py-4">The following forms are samples and not for use.</div>
 
 </div>
 

@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](IllinoisHEALSNOFO.pdf) {.text-xs-center .nofo-link}
+[LINK TO NOFO](IllinoisHEALSNOFO.pdf) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting proposals for support cross-system projects that improve the identification and coordination of care for children, youth, and families impacted by violence. Grants will be made with VICTIMS OF CRIME ACT FFY 17 funds. A total of $2,700,000 in funding is available through this solicitation for use over a period of 9 months. Cross-system projects applicants can apply for funding ranging from $150,000 to $500,000.
 **Application deadline: September 16, 2019.**

@@ -7,9 +7,9 @@ excerpt: 'The Illinois Criminal Justice Information Authority is requesting appl
 status: 'live'
 section: 'funding'
 ---
-## Notice of Funding Opportunity Trauma Recovery Centers (TRC) {.text-xs-center .TRC}
+## Notice of Funding Opportunity Trauma Recovery Centers (TRC) {.text-center .TRC}
 
-## <mark>[LINK TO NOFO](NOFOVPSI.pdf) {.text-xs-center .nofo-link}</mark>
+## <mark>[LINK TO NOFO](NOFOVPSI.pdf) {.text-center .nofo-link}</mark>
 
 The Illinois Criminal Justice Information Authority is requesting applications for state grants to establish and enhance trauma recovery centers. 
 
@@ -55,7 +55,7 @@ Funding is available for the period of February 18, 2020, through June 30, 2020.
 Technical assistance recordings providing additional information regarding this funding opportunity will be available for viewing beginning at 3:30 p.m. on November 5, 2019. 
 
 	
-### [VIEW THE REQUIRED TECHNICAL ASSISTANCE WEBINAR RECORDING](https://youtu.be/KwOyaaTQFNw){.text-xs-center .TA-Webinar}</mark>
+### [VIEW THE REQUIRED TECHNICAL ASSISTANCE WEBINAR RECORDING](https://youtu.be/KwOyaaTQFNw){.text-center .TA-Webinar}</mark>
 
 Information provided during this webinar recording will be unofficial and not binding on the state.
 
@@ -63,7 +63,7 @@ Information provided during this webinar recording will be unofficial and not bi
 	
 Agencies interested in applying are asked to submit an online Notice of Intent by **11:59 p.m., December 3, 2019**.
 
-## [Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_cCpxgR4FeMzYBox) {.text-xs-center .NOI}
+## [Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_cCpxgR4FeMzYBox) {.text-center .NOI}
 
 ## Timeline
 
@@ -94,7 +94,7 @@ The following documents must be emailed to CJA.SFY20NEWTRCNOFO@Illinois.gov by t
 - [Completed Program Narrative Category 2 (Word)]<mark>(TRCNARRATIVE2.docx)</mark>
 
 ## [DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS]<mark>(FY20VPSIZip(2).zip)</mark>
- {.text-xs-center .Zip-Docs}
+ {.text-center .Zip-Docs}
 ## Questions
 
 Questions regarding this NOFO may be submitted to CJA.SFY20NEWTRCNOFO@Illinois.gov until 11:59 p.m. December 3, 2019.  Questions and responses will be posted at https://grants.icjia.cloud.

@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@mdi/font": "^4.7.95",
+    "@nuxtjs/google-analytics": "^2.2.2",
     "babel-eslint": "^8.2.1",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^3.1.0",

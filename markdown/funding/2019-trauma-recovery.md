@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](SFY20TraumaRecoveryCenterNOFO.pdf) {.text-xs-center .nofo-link}
+[LINK TO NOFO](SFY20TraumaRecoveryCenterNOFO.pdf) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting applications for state grants to establish and enhance trauma recovery centers.
 
@@ -54,7 +54,7 @@ Funding is available for the period of February 18, 2020, through June 30, 2020.
 
 Technical assistance recordings providing additional information regarding this funding opportunity will be available for viewing beginning at 3:30 p.m. on November 5, 2019.
 
-### [VIEW THE REQUIRED TECHNICAL ASSISTANCE WEBINAR RECORDING](https://youtu.be/KwOyaaTQFNw){.text-xs-center .TA-Webinar}
+### [VIEW THE REQUIRED TECHNICAL ASSISTANCE WEBINAR RECORDING](https://youtu.be/KwOyaaTQFNw){.text-center .TA-Webinar}
 
 Information provided during this webinar recording will be unofficial and not binding on the state.
 
@@ -62,7 +62,7 @@ Information provided during this webinar recording will be unofficial and not bi
 
 Agencies interested in applying are asked to submit an online Notice of Intent by **11:59 p.m., December 3, 2019**.
 
-[Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_cCpxgR4FeMzYBox) {.text-xs-center}
+[Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_cCpxgR4FeMzYBox) {.text-center}
 
 ## Timeline
 
@@ -89,7 +89,7 @@ The following documents must be emailed to CJA.SFY20NEWTRCNOFO@Illinois.gov by t
 - [Completed Program Narrative Category 1 (Word)](NarrativeCategory1NewTRC.DOCX)
 - [Completed Program Narrative Category 2 (Word)](NarrativeCategory2ExisitingTRC.DOCX)
 
-[DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](SFY20TRCZip.zip){.text-xs-center .Zip-Docs}
+[DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](SFY20TRCZip.zip){.text-center .Zip-Docs}
 
 ## Questions
 

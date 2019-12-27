@@ -24,7 +24,7 @@ GATA requires grants administered by Executive branch state agencies to be award
 
 <div class="layout row wrap">
 <div class="flex xs12 sm12 md12">
-<h2>ICJIA Grant Process</h2>
+<h2 id="icjia-grant-process">ICJIA Grant Process</h2>
 </div>
 </div>
 

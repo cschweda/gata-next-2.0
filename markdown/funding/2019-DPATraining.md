@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[View the Notice of Funding Opportunity](DPAtrainingNOFO.pdf) {.text-xs-center .nofo-link}
+[View the Notice of Funding Opportunity](DPAtrainingNOFO.pdf) {.text-center .nofo-link}
 
 ## Introduction
 

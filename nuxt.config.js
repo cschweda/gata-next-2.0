@@ -13,7 +13,8 @@ module.exports = {
     htmlAttrs: {
       lang: 'en'
     },
-    title: pkg.name,
+    titleTemplate: 'ICJIA GATA | %s',
+
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -42,7 +43,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/css/github-markdown.css', '@/assets/css/app.css'],
 
   /*
    ** Plugins to load before mounting the App
@@ -65,6 +66,19 @@ module.exports = {
   generate: {
     routes
   },
+
+  buildModules: [
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-150082887-4'
+        // debug: {
+        //   enabled: false,
+        //   sendHitTask: true
+        // }
+      }
+    ]
+  ],
 
   // router: {
   //   base: process.env.NODE_ENV === 'development' ? '' : '/test/'

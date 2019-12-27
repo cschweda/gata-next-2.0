@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](NFSIAFFY19NOFO.pdf) {.text-xs-center .nofo-link}
+[LINK TO NOFO](NFSIAFFY19NOFO.pdf) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority (ICJIA) is requesting proposals to help improve the quality and timeliness of forensic science and medical examiner/coroner services throughout Illinois. Grants will be made with NFSIA FFY19 funds. A total of $663,555in funding is available through this solicitation from a targeted period of February 1, 2020 – December 31, 2020. Additional funding of up to 24 months may be awarded after the initial funding period, contingent upon a satisfactory performance and availability of funds. Total funding for the grant program will not exceed 36 months.
 

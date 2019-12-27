@@ -2,6 +2,7 @@
   <div>
     <base-content
       id="baseContentTop"
+      class="mb-12"
       :loading="loading"
     >
       <template v-slot:title>
@@ -32,7 +33,7 @@
               order-sm="2"
             >
               <div
-                class="dynamic-content"
+                class="dynamic-content  markdown-body"
                 @click="handleClicks"
                 v-html="content.html"
               />
@@ -49,6 +50,7 @@
               <TOC
                 selector="#scrollArea"
                 top="#baseContentTop"
+                :enable-tracking="content.enableTracking"
               />
             </v-col>
           </v-row>
@@ -104,6 +106,15 @@ export default {
         return this.showToc ? '9' : '12'
       }
     }
+  },
+  head() {
+    return {
+      title: this.content.title
+    }
+
+    // meta: [
+    //   { hid: 'description', name: 'description', content: 'About page description' }
+    // ]
   }
 }
 </script>

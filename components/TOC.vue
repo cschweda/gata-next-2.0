@@ -57,8 +57,13 @@ export default {
     mini: {
       type: Boolean,
       default: false
+    },
+    enableTracking: {
+      type: Boolean,
+      default: true
     }
   },
+
   data() {
     return {
       toc: []
@@ -75,28 +80,30 @@ export default {
         sections[e.id] = e.offsetTop - 100
       })
 
-      window.onscroll = () => {
-        var scrollPosition =
-          document.documentElement.scrollTop || document.body.scrollTop
-        const tocItems = document.querySelectorAll('.tocItem')
+      if (this.enableTracking) {
+        window.onscroll = () => {
+          var scrollPosition =
+            document.documentElement.scrollTop || document.body.scrollTop
+          const tocItems = document.querySelectorAll('.tocItem')
 
-        if (scrollPosition < 100) {
-          tocItems.forEach(toc => {
-            toc.classList.remove('visible')
-          })
-          this.$refs['anchor'].classList.add('visible')
-        } else {
-          this.$refs['anchor'].classList.remove('visible')
-        }
-        //console.log(scrollPosition);
-        for (i in sections) {
-          if (sections[i] <= scrollPosition) {
-            const sectionItem = document.getElementById(`scrollTo-${i}`)
-
+          if (scrollPosition < 100) {
             tocItems.forEach(toc => {
               toc.classList.remove('visible')
             })
-            sectionItem.classList.add('visible')
+            this.$refs['anchor'].classList.add('visible')
+          } else {
+            this.$refs['anchor'].classList.remove('visible')
+          }
+          //console.log(scrollPosition);
+          for (i in sections) {
+            if (sections[i] <= scrollPosition) {
+              const sectionItem = document.getElementById(`scrollTo-${i}`)
+
+              tocItems.forEach(toc => {
+                toc.classList.remove('visible')
+              })
+              sectionItem.classList.add('visible')
+            }
           }
         }
       }
@@ -136,7 +143,7 @@ export default {
   padding: 2px 5px 2px 5px;
 }
 .anchor:hover {
-  color: #057879;
+  color: #116bb9;
   background: #eee;
 }
 
@@ -166,7 +173,7 @@ ul.toc-list li {
 }
 
 ul.toc-list li:hover {
-  color: #065f60;
+  color: #116bb9;
   background: #eee;
 }
 @media only screen and (max-width: 960px) {

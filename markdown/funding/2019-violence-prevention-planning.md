@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[LINK TO NOFO](NOFOVPSIcomplete.pdf) {.text-xs-center .nofo-link}
+[LINK TO NOFO](NOFOVPSIcomplete.pdf) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting proposals for grants Violence Prevention Planning and One Time Supports. Grants will be made with SFY 2020 Violence Prevention and Street Intervention funds. A total of $8,336,326 in funding is available through this solicitation for use over a period of 6 months.
 

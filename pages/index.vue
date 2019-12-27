@@ -29,7 +29,7 @@
               order-sm="2"
             >
               <div
-                class="dynamic-content"
+                class="dynamic-content markdown-body"
                 @click="handleClicks"
                 v-html="content.html"
               />
@@ -97,7 +97,13 @@ export default {
       //console.log(this.toggleState)
     })
   },
-  methods: {}
+  methods: {},
+  head: {
+    title: 'Home'
+    // meta: [
+    //   { hid: 'description', name: 'description', content: 'About page description' }
+    // ]
+  }
 }
 </script>
 

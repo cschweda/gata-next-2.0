@@ -9,7 +9,7 @@ section: 'funding'
 showToc: true
 ---
 
-[View the Notice of Funding Opportunity](TraumaResponsiveSchoolsNOFO.pdf) {.text-xs-center .nofo-link}
+[View the Notice of Funding Opportunity](TraumaResponsiveSchoolsNOFO.pdf) {.text-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is posting this notice regarding grants for Trauma Responsive Schools. Grants will be made with state fiscal year 2019 bullying prevention funds. A total of $398,700 is available through June 30, 2019.
 

@@ -32,7 +32,7 @@
               order-sm="2"
             >
               <div
-                class="dynamic-content"
+                class="dynamic-content markdown-body"
                 @click="handleClicks"
                 v-html="content.html"
               />
