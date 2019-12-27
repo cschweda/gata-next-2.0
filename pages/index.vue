@@ -29,28 +29,38 @@
               order-sm="2"
             >
               <div
-                class="dynamic-content markdown-body"
+                class="dynamic-content markdown-body px-4"
+                
                 @click="handleClicks"
                 v-html="content.html"
               />
             </v-col>
           </v-row>
-          <v-row>
-            <v-col
-              cols="12"
-              sm="12"
-              md="12"
-            >
-              <h2>Funding Opportunities</h2>
-              <toggle />
-              <list-funding
-                
-                :funding="funding"
-                :toggle-state="toggleState"
-              />
-            </v-col>
-          </v-row>
         </v-container>
+        <div
+          style="background: #f5f5f5; border-top: 1px solid #ddd"
+          class="py-8"
+        >
+          <v-container>
+            <v-row>
+              <v-col
+                cols="12"
+                sm="12"
+                md="12"
+              >
+                <h2 style="text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-bottom: 25px;">
+                  Funding Opportunities
+                </h2>
+                <toggle />
+                <list-funding
+                
+                  :funding="funding"
+                  :toggle-state="toggleState"
+                />
+              </v-col>
+            </v-row>
+          </v-container>
+        </div>
       </template>
     </base-content>
   </div>

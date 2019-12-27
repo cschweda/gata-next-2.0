@@ -10,7 +10,7 @@ displayFooter: true
 menuTitle: 'Home'
 showToc: false
 status: 'live'
-dividerAfter: true
+dividerAfter: false
 ---
 
 <div class="layout row wrap">

@@ -3,6 +3,7 @@
     <v-switch
       v-model="toggle"
       :label="pageHeading"
+      :class="{isExpired: expired, isCurrent: !expired}"
     />
   </div>
 </template>
@@ -23,6 +24,9 @@ export default {
       } else {
         return 'expired'
       }
+    },
+    expired() {
+      return this.pageHeading === 'expired' ? true : false
     }
   },
   watch: {
