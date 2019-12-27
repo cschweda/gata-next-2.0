@@ -25,7 +25,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700, 900|Material+Icons'
       },
 
       {
@@ -81,7 +81,7 @@ module.exports = {
   ],
 
   // router: {
-  //   base: process.env.NODE_ENV === 'development' ? '' : '/test/'
+  //   base: process.env.NODE_ENV === 'development' ? '' : '/gatadev/'
   // },
   /*
    ** Build configuration

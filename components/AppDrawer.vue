@@ -25,33 +25,43 @@
             v-if="pages"
             dense
           >
-            <v-list-item
+            <div
               v-for="item in pages"
               :key="item.title"
-              link
             >
-              <v-list-item-content>
-                <h3
-                  v-if="item.slug==='home'"
-                  style="font-weight: 700;"
-                  @click="$router.push(`/`)"
-                >
-                  Home
-                </h3>
-                <h3
-                  v-else
-                  style="font-weight: 700;"
-                  @click="$router.push(`/${item.slug}`)"
-                >
-                  <span v-if="item.menuTitle">
-                    {{ item.menuTitle }}
-                  </span>
-                  <span v-else>
-                    {{ item.title }}
-                  </span>
-                </h3>
-              </v-list-item-content>
-            </v-list-item>
+              <v-list-item
+                
+                link
+              >
+                <v-list-item-content>
+                  <h3
+                    v-if="item.slug==='home'"
+                    style="font-weight: 700;"
+                    @click="$router.push(`/`)"
+                  >
+                    Home
+                  </h3>
+                  <h3
+                    v-else
+                    style="font-weight: 700;"
+                    @click="$router.push(`/${item.slug}`)"
+                  >
+                    <span v-if="item.menuTitle">
+                      {{ item.menuTitle }}
+                    </span>
+                    <span v-else>
+                      {{ item.title }} 
+                    </span>
+                  </h3>
+                </v-list-item-content>
+              </v-list-item>
+              <div
+                v-if="item.dividerAfter"
+                class="my-2"
+              >
+                <v-divider />
+              </div>
+            </div>
           </v-list>
         </v-container>
       </v-row>

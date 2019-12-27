@@ -6,10 +6,11 @@ menuItem: true
 position: 0
 section: 'pages'
 hideBreadcrumb: true
-displayFooter: false
+displayFooter: true
 menuTitle: 'Home'
 showToc: false
 status: 'live'
+dividerAfter: true
 ---
 
 <div class="layout row wrap">

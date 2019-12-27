@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <v-card
@@ -82,6 +83,7 @@
 </template>
 
 <script>
+/* eslint-disable vue/no-v-html */
 import { handleClicks } from '@/mixins/handleClicks'
 
 export default {

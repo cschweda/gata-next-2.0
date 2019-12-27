@@ -14,7 +14,7 @@ const md = require('markdown-it')(config.markdownItOptions)
   .use(require('markdown-it-attrs'))
 const siteArray = Object.getOwnPropertyNames(config.siteConfig)
 
-// const base = process.env.NODE_ENV === 'production' ? '/test' : ``
+// const base = process.env.NODE_ENV === 'production' ? '/gatadev' : ``
 const base = ''
 
 /**
@@ -160,20 +160,19 @@ siteArray.forEach(obj => {
         meta.expires = item.expires
         meta.path = item.path
         meta.status = item.status
-        // if (item.showToc) {
-        //   meta.showToc = item.showToc
-        // } else {
-        //   meta.showToc = false
-        // }
-
-        // if (item.enableTracking) {
-        //   meta.enableTracking = item.enableTracking
-        // } else {
-        //   meta.enableTracking = false
-        // }
+        if (item.dividerAfter) {
+          meta.dividerAfter = item.dividerAfter
+        } else {
+          meta.dividerAfter = false
+        }
 
         if (item.menuTitle) {
           meta.menuTitle = item.menuTitle
+        }
+        if (item.searchMeta) {
+          meta.searchMeta = item.searchMeta
+        } else {
+          meta.searchMeta = ''
         }
         meta.displayFooter = item.displayFooter
         if (item.section === 'news') {

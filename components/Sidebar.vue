@@ -5,49 +5,67 @@
     right 
     enable-resize-watcher 
     temporary 
-    app>
+    app
+  >
     <v-layout 
       sidebar-height 
       column 
       ma-0 
-      px-3>
+      px-3
+    >
       <div class="sidebarItem mt-3">
         <nuxt-link 
           to="/" 
-          class="sidebar-link">Home</nuxt-link>
+          class="sidebar-link"
+        >
+          Home
+        </nuxt-link>
       </div>
       <div class="sidebarItem">
         <nuxt-link 
           to="/news" 
-          class="sidebar-link">News & Announcements</nuxt-link>
+          class="sidebar-link"
+        >
+          News & Announcements
+        </nuxt-link>
       </div>
       <div class="sidebarItem">
         <nuxt-link 
           to="/funding" 
-          class="sidebar-link">Funding Opportunities</nuxt-link>
+          class="sidebar-link"
+        >
+          Funding Opportunities
+        </nuxt-link>
       </div>
-      <v-divider/>
+      <v-divider />
       <div 
         v-for="(page, index) in pages" 
         :key="index" 
-        class="sidebarItem">
+        class="sidebarItem"
+      >
         <nuxt-link
           v-if="page.menuItem"
           :to="generateSlug(page.slug)"
           class="sidebar-link"
-        ><span v-if="page.menuTitle">{{ page.menuTitle }}</span>
-        <span v-else>{{ page.title }}</span></nuxt-link>
+        >
+          <span v-if="page.menuTitle">{{ page.menuTitle }}</span>
+          <span v-else>{{ page.title }}</span>
+        </nuxt-link>
       </div>
-      <v-divider style="margin-top: -25px"/>
+      <v-divider style="margin-top: -25px" />
       <div 
         class="sidebarItem" 
-        style="padding-top: 10px;">
+        style="padding-top: 10px;"
+      >
         <nuxt-link 
           to="/search" 
-          class="sidebar-link">Search</nuxt-link>
+          class="sidebar-link"
+        >
+          Search
+        </nuxt-link>
       </div>
-      <v-spacer/>
-      <v-divider/>
+      <v-spacer />
+      <v-divider />
       <div class="text-center mb-3 pt-3 py-3">
         <img
           src="@/assets/img/logo-small.png"
@@ -63,7 +81,8 @@
         </h5>
         <h5 
           style="color: #666; font-weight: 400 !important;" 
-          class="mt-2">
+          class="mt-2"
+        >
           &copy;&nbsp;2019
           <a
             class="sidebar-footer-link"
@@ -74,7 +93,8 @@
           style="font-size: 10px;" 
           class="mt-2"><a href="https://legacy-grants.icjia.cloud">Previous ICJIA GATA site </a>&raquo;</div>
       </div> -->
-    </div></v-layout>
+      </div>
+    </v-layout>
   </v-navigation-drawer>
 </template>
 

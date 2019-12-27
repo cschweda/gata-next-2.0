@@ -3,13 +3,17 @@
     <div v-if="items.length===0">
       <h2 
         class="text-center py-5" 
-        style="color: #777">{{ empty }}</h2>
+        style="color: #777"
+      >
+        {{ empty }}
+      </h2>
     </div>
     <div 
       v-for="(item, index) in items"
       v-else 
-      :key="index">
-      <slot v-bind="item"/>
+      :key="index"
+    >
+      <slot v-bind="item" />
     </div>
   </div>
 </template>

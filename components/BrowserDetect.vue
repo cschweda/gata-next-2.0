@@ -12,7 +12,6 @@
       <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>,&nbsp;or
       <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">&nbsp;Microsoft Edge</a>.
     </h1>
-    
   </div>
 </template>
 

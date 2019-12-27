@@ -26,7 +26,14 @@
               style="background: #235e8e; font-weight: 900 !important"
               :aria-label="link.title"
             >
-              <span style="font-size: 12px">{{ link.title }}</span>
+              <span
+                v-if="link.menuTitle"
+                style="font-size: 12px"
+              >{{ link.menuTitle }}</span>
+              <span
+                v-else
+                style="font-size: 12px"
+              >{{ link.title }}</span>
             </v-btn>
           </span>
         </span>

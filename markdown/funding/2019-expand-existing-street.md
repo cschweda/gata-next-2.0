@@ -1,12 +1,11 @@
 ---
 title: 'Notice of Funding Opportunity to Enhance and Expand Existing Street Intervention Programming'
 created: '2019-12-16'
-posted: '2019-12-26'
+posted: '2019-12-16'
 expires: '2020-01-16'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting proposals for grants to Enhance and Expand Existing Street Intervention Programming'
 status: 'live'
 section: 'funding'
-showToc: true
 ---
 
 [LINK TO NOFO](NOFO.pdf) {.text-center .nofo-link}
@@ -55,7 +54,7 @@ Information provided during these webinar recordings will be unofficial and not 
 
 Agencies interested in applying are asked to submit an online Notice of Intent by **11:59 p.m., January 9, 2020.**
 
-[Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_1S7fGy9HWSkJ1E9) {.text-center .NOI}
+[Complete NOTICE of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_1S7fGy9HWSkJ1E9) {.text-xs-center .NOI}
 
 ## Range of Grant Awards
 
@@ -92,11 +91,13 @@ The following documents must be emailed to CJA.StateViolencePrevention@Illinois.
 
 - [Completed Budget/Budget Narrative (Excel)](Budget.xlsx)
 
-[DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](VPSIExpansionZip.zip) {.text-center .Zip-Docs}
+[DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](VPSIExpansionZip.zip) {.text-xs-center .Zip-Docs}
 
 ## Questions
 
-Questions regarding this NOFO may be submitted to CJA.StateViolencePrevention@Illinois.gov until 11:59 p.m., January 9, 2020. Questions and responses will be posted at https://grants.icjia.cloud.
+Questions regarding this NOFO may be submitted to CJA.StateViolencePrevention@Illinois.gov until 11:59 p.m., January 9, 2020.
+
+[Download current applicant questions and responses](UpdatesandResponsetoApplicantQuestions.pdf).
 
 ## Contact Information
 
