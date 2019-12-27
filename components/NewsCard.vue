@@ -34,7 +34,7 @@
           {{ content.posted | format }}
           <v-list-item-title
             class="headline mb-1"
-            style="font-weight: 700; font-size: 28px !important; margin: 0; padding: 0;"
+            style="font-weight: 700; font-size: 36px !important; margin: 0; padding: 0; "
           >
             <router-link
               :to="`/news/${content.slug}`"

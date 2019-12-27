@@ -47,5 +47,5 @@ module.exports = {
     }
   },
   debug: false,
-  base: 'https://icjia.illinois.gov/test'
+  base: 'gata'
 }

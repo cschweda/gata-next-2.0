@@ -1,5 +1,6 @@
 const pkg = require('./package')
 const routes = require('./routes')
+const config = require('./config.json')
 
 console.log(process.env.NODE_ENV)
 
@@ -80,9 +81,9 @@ module.exports = {
     ]
   ],
 
-  // router: {
-  //   base: process.env.NODE_ENV === 'development' ? '' : '/gatadev/'
-  // },
+  router: {
+    base: process.env.NODE_ENV === 'development' ? '' : `/${config.base}/`
+  },
   /*
    ** Build configuration
    */

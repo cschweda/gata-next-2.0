@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card
-      class="mb-10 elevation-1 py-6 px-3 funding-card"
+      class="mb-10 elevation-1 py-6 px-6 funding-card"
       @click="routeToItem(item)"
     >
       <div

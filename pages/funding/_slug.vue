@@ -21,7 +21,7 @@
         >
           <v-row class="text-left">
             <v-col cols="12">
-              <h1 class="page-title rule">
+              <h1 class="page-title rule text-center">
                 {{ content.title }}
               </h1>
             </v-col>

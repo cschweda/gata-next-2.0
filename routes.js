@@ -1,7 +1,8 @@
-const config = require('./config')
+const config = require('./config.json')
 const routes = []
 const siteArray = Object.getOwnPropertyNames(config.siteConfig)
-const base = process.env.NODE_ENV === 'development' ? '' : ``
+//const base = process.env.NODE_ENV === 'production' ? `/${config.base}` : ``
+const base = ''
 
 siteArray.forEach(section => {
   try {
@@ -14,4 +15,5 @@ siteArray.forEach(section => {
     console.log(`ERROR: ${e}`)
   }
 })
+
 module.exports = routes

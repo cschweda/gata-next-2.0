@@ -1,4 +1,4 @@
-const config = require('@/config')
+const config = require('@/config.json')
 import { EventBus } from '@/event-bus.js'
 
 const getContent = async (section, slug) =>
