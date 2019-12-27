@@ -14,7 +14,7 @@ const md = require('markdown-it')(config.markdownItOptions)
   .use(require('markdown-it-attrs'))
 const siteArray = Object.getOwnPropertyNames(config.siteConfig)
 
-const base = process.env.NODE_ENV === 'production' ? `${config.base}` : ``
+const base = process.env.NODE_ENV === 'production' ? `gata/` : ``
 //const base = ''
 
 /**
@@ -47,7 +47,7 @@ function linkify(html, section, slug) {
 
     //console.log(arr[1], match)
     if (!match && isAFile) {
-      const href = `${base}/materials/${section}/${slug}/${arr[1]}`
+      const href = `${base}materials/${section}/${slug}/${arr[1]}`
       return `href="/${href}`
     }
     return $1
