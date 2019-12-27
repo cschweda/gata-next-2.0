@@ -10,7 +10,7 @@ export const handleClicks = {
       const { target } = $event
       const href = $event.target.href
       const mailto = /mailto/g
-      const download = /^.*\.(pdf|doc|docx|xls|xlsx)$/i
+      const download = /^.*\.(pdf|doc|docx|xls|xlsx|zip)$/i
 
       //console.log(target);
       // handle only links that occur inside the component and do not reference external resources
