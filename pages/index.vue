@@ -86,7 +86,7 @@ export default {
   async asyncData({ isDev }) {
     let page = {}
     try {
-      page.content = await getContent('pages', 'home1')
+      page.content = await getContent('pages', 'home')
       page.funding = await getAllFunding()
       page.loading = false
       page.error = null
