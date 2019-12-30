@@ -12,7 +12,7 @@
           <v-row class="text-left">
             <v-col>
               <h1 class="page-title rule">
-                {{ page.content.title }}
+                News and Announcements
               </h1>
             </v-col>
           </v-row>
