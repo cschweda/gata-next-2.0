@@ -133,10 +133,6 @@ export default {
     return {
       title: this.pageTitle
     }
-
-    // meta: [
-    //   { hid: 'description', name: 'description', content: 'About page description' }
-    // ]
   }
 }
 </script>

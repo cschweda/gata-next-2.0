@@ -11,9 +11,6 @@
 export default {
   head: {
     title: '404 Page Not Found'
-    // meta: [
-    //   { hid: 'description', name: 'description', content: 'About page description' }
-    // ]
   }
 }
 </script>

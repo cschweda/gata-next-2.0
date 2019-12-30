@@ -124,9 +124,6 @@ export default {
   methods: {},
   head: {
     title: 'ICJIA GATA Home'
-    // meta: [
-    //   { hid: 'description', name: 'description', content: 'About page description' }
-    // ]
   }
 }
 </script>

@@ -77,6 +77,9 @@ export default {
       loading: true,
       toggleState: null
     }
+  },
+  head: {
+    title: 'ICJIA GATA Search'
   }
 }
 </script>
