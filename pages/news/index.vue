@@ -22,13 +22,14 @@
         <v-container
           v-if="page.content && page.status === 200"
           id="scrollArea"
+          class="mb-10"
         >
           <v-col
             cols="12"
             sm="12"
             md="12"
           >
-            <ListNewsTable :items="page.news" />
+            <ListNewsTable :items="filteredNews" />
           </v-col>
         </v-container>
       </template>
@@ -76,6 +77,14 @@ export default {
       toggleState: null
     }
   },
+  computed: {
+    filteredNews() {
+      let filteredNews = this.page.news.filter(item => {
+        return item.status === 'live'
+      })
+      return filteredNews
+    }
+  },
   created() {
     if (this.page.redirect) {
       console.log('Redirect: ', this.page)
@@ -85,9 +94,6 @@ export default {
   methods: {},
   head: {
     title: 'ICJIA GATA News'
-    // meta: [
-    //   { hid: 'description', name: 'description', content: 'About page description' }
-    // ]
   }
 }
 </script>

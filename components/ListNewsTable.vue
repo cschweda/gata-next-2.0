@@ -28,7 +28,7 @@
             @click:row="clicked"
           >
             <template
-              v-slot:item.createdAt="{ item }"
+              v-slot:item.posted="{ item }"
             >
               <div style="cursor: pointer !important">
                 {{ item.posted | format }}
@@ -77,11 +77,14 @@
             <tbody>
               <tr
                 v-for="item in items"
+               
                 :key="item.title"
                 @click.stop="$router.push(`/news/${item.slug}`)"
               >
                 <td>{{ item.posted | format }}</td>
-                <td>{{ item.title }}</td>
+                <td style="font-weight: bold">
+                  {{ item.title }}
+                </td>
                 <td>
                   <v-btn>
                     <v-icon @click.stop="$router.push(`/news/${item.slug}`)">

@@ -60,7 +60,9 @@ export default {
       let news = await getAllNews()
       let funding = await getAllFunding()
       let pages = await getAllPages()
-      let searchContent = [...news, ...funding, ...pages]
+      let searchContent = [...news, ...funding, ...pages].filter(item => {
+        return item.status === 'live'
+      })
       let loading = false
       return { content, searchContent, loading }
     } catch (error) {
@@ -78,6 +80,7 @@ export default {
       toggleState: null
     }
   },
+  computed: {},
   head: {
     title: 'ICJIA GATA Search'
   }

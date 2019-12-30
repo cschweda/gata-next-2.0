@@ -1,11 +1,11 @@
 ---
-title: 'Another Announcement'
+title: 'Yet Another Announcement'
 created: '2019-08-21'
-posted: '2019-08-21'
+posted: '2019-09-16'
 excerpt: 'Lorem markdownum modo. Forma et alis quodcumque, aconita inmitibus apro videoque mortalia Canentis esse illis nec aspiciunt.'
-status: 'draft'
+status: 'live'
 section: 'news'
-showToc: false
+showToc: true
 ---
 
 Lorem markdownum modo. Forma et alis quodcumque, aconita inmitibus apro videoque
