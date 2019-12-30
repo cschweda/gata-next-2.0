@@ -17,6 +17,7 @@ import AppFooter from '@/components/AppFooter'
 import AppDrawer from '@/components/AppDrawer'
 export default {
   transition: 'default',
+  scrollToTop: true,
   components: {
     AppNav,
     AppFooter,
