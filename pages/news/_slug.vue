@@ -76,14 +76,9 @@ export default {
   async asyncData({ isDev, params }) {
     let page = {}
     try {
-      // if (params.slug === 'home') {
-      //   redirect('/')
-      // }
       page.content = await getContent('news', params.slug)
-
       page.error = null
       page.status = 200
-
       page.redirect = null
       page.loading = false
     } catch (error) {
