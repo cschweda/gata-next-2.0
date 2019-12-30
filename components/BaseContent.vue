@@ -12,7 +12,7 @@
       <slot name="error" />
     </div>
     <div v-else>
-      <v-container>
+      <v-container style="margin-top: 150px">
         <v-row>
           <v-col>
             <loader />

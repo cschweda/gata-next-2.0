@@ -3,7 +3,7 @@ title: 'Forma et alis quodcumque'
 created: '2019-04-04'
 posted: '2019-04-04'
 excerpt: 'Lorem markdownum modo. Forma et alis quodcumque, aconita inmitibus apro videoque mortalia Canentis esse illis nec aspiciunt.'
-status: 'draft'
+status: 'live'
 section: 'news'
 showToc: false
 ---

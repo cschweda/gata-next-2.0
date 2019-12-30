@@ -32,9 +32,9 @@
       <v-list-item three-line>
         <v-list-item-content>
           {{ content.posted | format }}
-          <v-list-item-title
-            class="headline mb-1"
-            style="font-weight: 700; font-size: 36px !important; margin: 0; padding: 0; "
+          <h2
+            class="news-headline"
+            style=""
           >
             <router-link
               :to="`/news/${content.slug}`"
@@ -44,7 +44,7 @@
                 content.title
               }}
             </router-link>
-          </v-list-item-title>
+          </h2>
         </v-list-item-content>
       </v-list-item>
       <v-card-text

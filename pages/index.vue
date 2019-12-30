@@ -91,13 +91,14 @@ export default {
       page.loading = false
       page.error = null
       page.status = 200
+      page.redirect = null
     } catch (error) {
       page.content = null
       page.funding = null
-      page.loading = false
+      page.loading = true
       page.error = error
       page.status = 404
-      console.log(error)
+      page.redirect = '/404'
     }
     return { page }
   },
@@ -105,7 +106,7 @@ export default {
     return {
       hideExpired: true,
       content: null,
-      loading: true,
+
       toggleState: null
     }
   },
@@ -114,9 +115,9 @@ export default {
       this.toggleState = state
       //console.log(this.toggleState)
     })
-    if (this.page.status === 404) {
+    if (this.page.redirect) {
       console.log('Redirect: ', this.page)
-      this.$router.push('/404')
+      this.$router.push(`${this.page.redirect}`)
     }
   },
   mounted() {},

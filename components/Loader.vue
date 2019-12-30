@@ -1,7 +1,7 @@
 <template>
   <div
     class="text-center my-12"
-    style="height: 300px; margin-top: 150px"
+    style="height: 300px;"
   >
     <v-progress-circular
       indeterminate

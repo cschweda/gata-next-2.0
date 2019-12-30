@@ -78,14 +78,23 @@ export default {
       //   redirect('/')
       // }
       page.content = await getContent('pages', params.slug)
-      page.loading = false
+
       page.error = null
       page.status = 200
+      if (params.slug === 'home') {
+        page.redirect = '/'
+        page.loading = true
+      } else {
+        page.redirect = null
+        page.loading = false
+      }
     } catch (error) {
       page.content = null
       page.loading = false
       page.error = error
       page.status = 404
+      page.redirect = '/404'
+      page.loading = true
     }
     return { page }
   },
@@ -108,9 +117,9 @@ export default {
   },
 
   created() {
-    if (this.page.status === 404) {
+    if (this.page.redirect) {
       console.log('Redirect: ', this.page)
-      this.$router.push('/404')
+      this.$router.push(`${this.page.redirect}`)
     } else {
       this.showToc = this.page.content.showToc
     }
