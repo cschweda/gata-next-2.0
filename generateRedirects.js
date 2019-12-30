@@ -3,6 +3,7 @@ const fs = require('fs')
 
 //console.log(routes)
 let contents = '/\t\t/index.html\t\t200\n'
+contents = contents + '/home\t\t/index.html\t\t200\n'
 routes.forEach(route => {
   if (route !== '/') {
     contents = contents + `${route}\t\t${route}/index.html\t\t200\n`
