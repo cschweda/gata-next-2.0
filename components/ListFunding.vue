@@ -1,7 +1,10 @@
 <template>
   <div>
+    <div v-if="loading">
+      <loader />
+    </div>
     <div
-      v-if="filteredFunding.length === 0"
+      v-if="filteredFunding.length === 0 && !loading"
       class="text-center mb-10 mt-3"
     >
       <h2>
@@ -10,6 +13,7 @@
     </div>
     <div
       v-for="item in filteredFunding"
+      v-else
       :key="item.title"
     >
       <funding-card
@@ -22,10 +26,12 @@
 
 <script>
 import FundingCard from '@/components/FundingCard'
+import Loader from '@/components/Loader'
 export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    FundingCard
+    FundingCard,
+    Loader
   },
   props: {
     funding: {
@@ -39,11 +45,13 @@ export default {
   },
   data() {
     return {
-      filteredFunding: []
+      filteredFunding: [],
+      loading: true
     }
   },
   watch: {
     toggleState(newValue, oldValue) {
+      this.loading = true
       const today = new Date()
       const target = new Date(today.setHours(0, 0, 0, 0))
 
@@ -78,6 +86,7 @@ export default {
         })
       }
       this.filteredFunding = filteredFunding
+      this.loading = false
     }
   }
 }

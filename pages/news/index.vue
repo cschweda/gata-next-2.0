@@ -60,7 +60,7 @@ export default {
       page.redirect = null
     } catch (error) {
       page.content = null
-      page.funding = null
+      page.news = null
       page.loading = true
       page.error = error
       page.status = 404

@@ -1,8 +1,9 @@
 <template>
   <div>
     <base-content
+      v-if="page.content && page.status === 200"
       id="baseContentTop"
-      :loading="loading"
+      :loading="page.loading"
     >
       <template v-slot:title>
         <v-container
@@ -11,7 +12,7 @@
           <v-row class="text-left">
             <v-col>
               <h1 class="page-title rule">
-                {{ content.title }}
+                {{ page.content.title }}
               </h1>
             </v-col>
           </v-row>
@@ -19,7 +20,7 @@
       </template>
       <template v-slot:content>
         <v-container
-          v-if="content"
+          v-if="page.content && page.status === 200"
           id="scrollArea"
         >
           <v-row>
@@ -29,9 +30,10 @@
               md="12"
             >
               <toggle />
+              
               <list-funding
               
-                :funding="funding"
+                :funding="page.funding"
                 :toggle-state="toggleState"
               />
             </v-col>
@@ -57,23 +59,29 @@ export default {
   },
   mixins: [handleClicks],
   async asyncData({ isDev, redirect }) {
+    let page = {}
     try {
-      let content = await getContent('pages', 'funding')
-      let funding = await getAllFunding()
-      let loading = false
-      return { content, funding, loading }
+      page.content = await getContent('pages', 'home')
+      page.funding = await getAllFunding()
+      page.loading = false
+      page.error = null
+      page.status = 200
+      page.redirect = null
     } catch (error) {
-      let loading = false
-      let content = ''
-      console.log(error)
-      redirect('/404')
+      page.content = null
+      page.funding = null
+      page.loading = true
+      page.error = error
+      page.status = 404
+      page.redirect = '/404'
     }
+    return { page }
   },
   data() {
     return {
       hideExpired: true,
       content: null,
-      loading: true,
+
       toggleState: null
     }
   },
@@ -82,8 +90,16 @@ export default {
       this.toggleState = state
       //console.log(this.toggleState)
     })
+    if (this.page) {
+      if (this.page.redirect) {
+        console.log('Redirect: ', this.page)
+        this.$router.push(`${this.page.redirect}`)
+      }
+    }
   },
-  methods: {}
+  head: {
+    title: 'ICJIA GATA Funding Opportunities'
+  }
 }
 </script>
 
