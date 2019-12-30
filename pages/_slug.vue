@@ -1,6 +1,7 @@
 <template>
   <div>
     <base-content
+      v-if="page && page.loading"
       id="baseContentTop"
       class="mb-12"
       :loading="page.loading"
