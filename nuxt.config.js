@@ -80,7 +80,7 @@ module.exports = {
       }
     ]
   ],
-  features: { transitions: false },
+  // features: { transitions: false },
 
   router: {
     base: process.env.NODE_ENV === 'development' ? '' : `/${config.base}/`
