@@ -3,16 +3,16 @@
     <base-content
       id="baseContentTop"
       class="mb-12"
-      :loading="loading"
+      :loading="page.loading"
     >
       <template v-slot:title>
         <v-container
-          v-if="content"
+          v-if="page.content && page.status === 200"
         >
           <v-row class="text-left">
             <v-col cols="12">
               <h1 class="page-title">
-                {{ content.title }}
+                {{ page.content.title }}
               </h1>
             </v-col>
           </v-row>
@@ -20,7 +20,7 @@
       </template>
       <template v-slot:content>
         <v-container
-          v-if="content"
+          v-if="page.content && page.status === 200"
           id="scrollArea"
         >
           <v-row>
@@ -35,7 +35,7 @@
               <div
                 class="dynamic-content markdown-body"
                 @click="handleClicks"
-                v-html="content.html"
+                v-html="page.content.html"
               />
             </v-col>
             <v-col
@@ -50,7 +50,7 @@
               <TOC
                 selector="#scrollArea"
                 top="#baseContentTop"
-                :enable-tracking="content.enableTracking"
+                :enable-tracking="page.content.enableTracking"
               />
             </v-col>
           </v-row>
@@ -71,21 +71,23 @@ export default {
     TOC
   },
   mixins: [handleClicks],
-  async asyncData({ isDev, redirect, params }) {
+  async asyncData({ isDev, params }) {
+    let page = {}
     try {
-      if (params.slug === 'home') {
-        redirect('/')
-      }
-      let content = await getContent('pages', params.slug)
-      let loading = false
-      return { content, loading }
+      // if (params.slug === 'home') {
+      //   redirect('/')
+      // }
+      page.content = await getContent('pages', params.slug)
+      page.loading = false
+      page.error = null
+      page.status = 200
     } catch (error) {
-      let loading = false
-      let content = ''
-
-      console.log(error)
-      redirect('/404')
+      page.content = null
+      page.loading = false
+      page.error = error
+      page.status = 404
     }
+    return { page }
   },
   data() {
     return {
@@ -95,8 +97,23 @@ export default {
       showToc: false
     }
   },
+  computed: {
+    pageTitle() {
+      if (this.page && this.page.status === 200) {
+        return this.page.content.title
+      } else {
+        return 'Error'
+      }
+    }
+  },
+
   created() {
-    this.showToc = this.content.showToc
+    if (this.page.status === 404) {
+      console.log('Redirect: ', this.page)
+      this.$router.push('/404')
+    } else {
+      this.showToc = this.page.content.showToc
+    }
   },
   methods: {
     dynamicFlex() {
@@ -109,7 +126,7 @@ export default {
   },
   head() {
     return {
-      title: this.content.title
+      title: this.pageTitle
     }
 
     // meta: [

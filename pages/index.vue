@@ -1,22 +1,24 @@
+
 <template>
   <div>
     <div
-      v-if="content"
+      v-if="page.content && page.status === 200"
       class="text-center py-8"
       style="background: #0D4474; margin-top: 90px;"
     >
       <h1 style="color: #fff">
-        {{ content.title }}
+        {{ page.content.title }}
       </h1>
     </div>
     
     <base-content
-      :loading="loading"
+      v-if="page.content && page.status === 200"
+      :loading="page.loading"
       style="margin-top: -100px"
     >
       <template v-slot:content>
         <v-container
-          v-if="content"
+          v-if="page.content && page.status === 200"
           id="scrollArea"
         >
           <v-row>
@@ -32,7 +34,7 @@
                 class="dynamic-content markdown-body px-4"
                 
                 @click="handleClicks"
-                v-html="content.html"
+                v-html="page.content.html"
               />
             </v-col>
           </v-row>
@@ -54,7 +56,7 @@
                 <toggle />
                 <list-funding
                 
-                  :funding="funding"
+                  :funding="page.funding"
                   :toggle-state="toggleState"
                 />
               </v-col>
@@ -67,6 +69,7 @@
 </template>
 
 <script>
+/* eslint-disable vue/no-unused-components */
 import BaseContent from '@/components/BaseContent'
 import ListFunding from '@/components/ListFunding'
 import Toggle from '@/components/Toggle'
@@ -80,18 +83,23 @@ export default {
     Toggle
   },
   mixins: [handleClicks],
-  async asyncData({ isDev, redirect }) {
+  async asyncData({ isDev }) {
+    let page = {}
     try {
-      let content = await getContent('pages', 'home')
-      let funding = await getAllFunding()
-      let loading = false
-      return { content, funding, loading }
+      page.content = await getContent('pages', 'home1')
+      page.funding = await getAllFunding()
+      page.loading = false
+      page.error = null
+      page.status = 200
     } catch (error) {
-      let loading = false
-      let content = ''
+      page.content = null
+      page.funding = null
+      page.loading = false
+      page.error = error
+      page.status = 404
       console.log(error)
-      redirect('/404')
     }
+    return { page }
   },
   data() {
     return {
@@ -106,7 +114,12 @@ export default {
       this.toggleState = state
       //console.log(this.toggleState)
     })
+    if (this.page.status === 404) {
+      console.log('Redirect: ', this.page)
+      this.$router.push('/404')
+    }
   },
+  mounted() {},
   methods: {},
   head: {
     title: 'ICJIA GATA Home'
