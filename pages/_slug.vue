@@ -1,7 +1,7 @@
 <template>
   <div>
     <base-content
-      v-if="page && page.loading"
+      v-if="page"
       id="baseContentTop"
       class="mb-12"
       :loading="page.loading"
@@ -75,9 +75,6 @@ export default {
   async asyncData({ isDev, params }) {
     let page = {}
     try {
-      // if (params.slug === 'home') {
-      //   redirect('/')
-      // }
       page.content = await getContent('pages', params.slug)
 
       page.error = null

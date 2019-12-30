@@ -1,11 +1,12 @@
 <template>
   <div>
     <base-content
+      v-if="page"
       id="baseContentTop"
-      :loading="loading"
+      :loading="page.loading"
     >
       <template 
-        v-if="isExpired" 
+        v-if="page && isExpired" 
         slot="expired"
       >
         <div
@@ -17,12 +18,12 @@
       </template>
       <template v-slot:title>
         <v-container
-          v-if="content"
+          v-if="page.content && page.status === 200"
         >
           <v-row class="text-left">
             <v-col cols="12">
               <h1 class="page-title rule text-center">
-                {{ content.title }}
+                {{ page.content.title }}
               </h1>
             </v-col>
           </v-row>
@@ -30,7 +31,7 @@
       </template>
       <template v-slot:content>
         <v-container
-          v-if="content"
+          v-if="page.content && page.status === 200"
           id="scrollArea"
         >
           <v-row>
@@ -45,7 +46,7 @@
               <div
                 class="dynamic-content markdown-body"
                 @click="handleClicks"
-                v-html="content.html"
+                v-html="page.content.html"
               />
             </v-col>
             <v-col
@@ -81,41 +82,65 @@ export default {
   },
   mixins: [handleClicks],
   async asyncData({ isDev, redirect, params }) {
+    let page = {}
     try {
-      let content = await getContent('funding', params.slug)
-      let loading = false
-      return { content, loading }
-    } catch (error) {
-      let loading = false
-      let content = ''
+      page.content = await getContent('funding', params.slug)
 
-      console.log(error)
-      redirect('/404')
+      page.error = null
+      page.status = 200
+
+      page.redirect = null
+      page.loading = false
+    } catch (error) {
+      page.content = null
+      page.loading = false
+      page.error = error
+      page.status = 404
+      page.redirect = '/404'
+      page.loading = true
     }
+    return { page }
   },
   data() {
     return {
       hideExpired: true,
       content: null,
-      loading: true,
+
       showToc: false
     }
   },
   computed: {
     isExpired() {
-      const today = new Date()
-      const target = new Date(today.setHours(0, 0, 0, 0))
-      if (new Date(this.content.expires) < target) {
-        return true
+      if (this.page && this.page.status === 200) {
+        const today = new Date()
+        const target = new Date(today.setHours(0, 0, 0, 0))
+        if (new Date(this.page.content.expires) < target) {
+          return true
+        } else {
+          return false
+        }
       } else {
-        return false
+        return null
+      }
+    },
+    pageTitle() {
+      if (this.page && this.page.status === 200) {
+        return this.page.content.title
+      } else {
+        return 'Error'
       }
     }
   },
-  created() {
-    this.showToc = this.content.showToc
+  mounted() {
+    if (this.page) {
+      if (this.page.redirect) {
+        console.log('Redirect: ', this.page)
+        this.$router.push(`${this.page.redirect}`)
+      } else {
+        this.showToc = this.page.content.showToc
+      }
+    }
   },
-  mounted() {},
   methods: {
     dynamicFlex() {
       if (this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm) {
@@ -124,6 +149,15 @@ export default {
         return this.showToc ? '9' : '12'
       }
     }
+  },
+  head() {
+    return {
+      title: this.pageTitle
+    }
+
+    // meta: [
+    //   { hid: 'description', name: 'description', content: 'About page description' }
+    // ]
   }
 }
 </script>

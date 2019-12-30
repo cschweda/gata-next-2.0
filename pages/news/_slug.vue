@@ -2,6 +2,7 @@
 <template>
   <div>
     <base-content
+      v-if="page"
       id="baseContentTop"
       class="mb-12"
       :loading="page.loading"
@@ -109,12 +110,14 @@ export default {
     }
   },
 
-  created() {
-    if (this.page.redirect) {
-      console.log('Redirect: ', this.page)
-      this.$router.push(`${this.page.redirect}`)
-    } else {
-      this.showToc = this.page.content.showToc
+  mounted() {
+    if (this.page) {
+      if (this.page.redirect) {
+        console.log('Redirect: ', this.page)
+        this.$router.push(`${this.page.redirect}`)
+      } else {
+        this.showToc = this.page.content.showToc
+      }
     }
   },
   methods: {
