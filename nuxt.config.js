@@ -21,6 +21,16 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
+    script: [
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'
+      },
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/event-source-polyfill/0.0.9/eventsource.min.js'
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -70,6 +80,8 @@ module.exports = {
 
   buildModules: [
     [
+      '@nuxtjs/vuetify',
+      { treeShake: true },
       '@nuxtjs/google-analytics',
       {
         id: 'UA-150082887-4'
@@ -92,8 +104,10 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
+
     extend(config, ctx) {
       // Run ESLint on save
+
       if (ctx.isDev && ctx.isClient) {
         // config.module.rules.push({
         //   enforce: 'pre',

@@ -25,11 +25,13 @@
     "markdown-it-named-headers": "0.0.4",
     "nuxt": "^2.11.0",
     "slug": "^2.0.0",
-    "vuetify": "^2.1.15"
+    "vuetify": "^2.1.15",
+    "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
     "@mdi/font": "^4.7.95",
     "@nuxtjs/google-analytics": "^2.2.2",
+    "@nuxtjs/vuetify": "^1.9.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^3.1.0",
