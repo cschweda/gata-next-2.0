@@ -24,7 +24,7 @@ module.exports = {
     script: [
       {
         src:
-          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'
+          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.4/polyfill.min.js'
       },
       {
         src:
